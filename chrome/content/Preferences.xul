@@ -100,7 +100,7 @@
                                          style="color: blue; text-decoration:underline;"
                                          onmouseover="event.target.style.cursor='pointer'"
                                          onmouseout="event.target.style.cursor='default'"
-                                        onclick="httpsinquirer.Preferences.openWebsiteInTab('https://code.google.com/p/https-finder/');"/>
+                                        onclick="httpsinquirer.Preferences.openWebsiteInTab('https://github.com/g4jc/httpsinquirer/');"/>
                             </row>
                         </vbox>
                     </column>
@@ -177,8 +177,8 @@
                             <!--<description value="&httpsinquirer.buildDateTitle;" class="title"/>
                             <description>&httpsinquirer.buildDate;</description>-->
                             <description value="&httpsinquirer.authorTitle;" class="title"/>
-                            <description>Kevin Jacobs</description>
-                            <!--<description onclick="httpsinquirer.Preferences.openWebsiteInTab('http://kevinajacobs.com/');" class="url">&httpsinquirer.mySite;</description>-->
+                            <description>Hyperbola Project</description>
+                            <!--<description onclick="httpsinquirer.Preferences.openWebsiteInTab('https://hyperbola.info/');" class="url">&httpsinquirer.mySite;</description>-->
                             <description value="&httpsinquirer.preference.supportTitle;" class="title"/>
                             <description onclick="location.href='mailto:&httpsinquirer.preference.supportEmail;'" class="url">&httpsinquirer.preference.supportEmail;</description>
                         </vbox>

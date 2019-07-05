@@ -10,13 +10,13 @@
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "插件最后打包于:">
 <!ENTITY httpsinquirer.authorTitle "作者:">
-<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.googleCodeURL "https://github.com/g4jc/httpsinquirer/">
+<!ENTITY httpsinquirer.mySite "https://hyperbola.info">
 <!ENTITY httpsinquirer.preference.title "HTTPS Inquirer设置">
 <!ENTITY httpsinquirer.preference.titleKey "H">
 <!ENTITY httpsinquirer.preference.translations "多国语言包由以下人士提供:">
 <!ENTITY httpsinquirer.preference.supportTitle "Email支持:">
-<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.supportEmail "swdevel@hyperbola.info">
 <!ENTITY httpsinquirer.preference.enable "开启HTTPS Inquirer">
 <!ENTITY httpsinquirer.preference.noRulePrompt "不要提示我保存HTTPS规则(针对不使用HTTPS Always的用户)">
 <!ENTITY httpsinquirer.preference.autoForward "HTTPS可用时自动强制使用">

@@ -34,15 +34,11 @@
                 <menuitem class="menuitem-iconic" id="httpsinquirerHomepageItem"
                     image="chrome://httpsinquirer/skin/iconSmall.png"
                     label="&httpsinquirer.menu.homepage;" accesskey="&httpsinquirer.menu.homepageKey;"
-                    oncommand="gBrowser.selectedTab = gBrowser.addTab('https://code.google.com/p/https-finder/');" />
-                <menuitem class="menuitem-iconic" id="httpsinquirerReviewItem"
-                    image="chrome://httpsinquirer/skin/rate.png"
-                    label="&httpsinquirer.menu.rate;" accesskey="&httpsinquirer.menu.rateKey;"
-                    oncommand="gBrowser.selectedTab = gBrowser.addTab('https://addons.mozilla.org/en-US/firefox/addon/https-finder/reviews/add');" />
+                    oncommand="gBrowser.selectedTab = gBrowser.addTab('https://github.com/g4jc/httpsinquirer/');" />
                 <menuitem class="menuitem-iconic" id="httpsinquirerHelpItem"
                     image="chrome://httpsinquirer/skin/help.png"
                     label="&httpsinquirer.menu.help;" accesskey="&httpsinquirer.menu.helpKey;"
-                    oncommand="gBrowser.selectedTab = gBrowser.addTab('https://code.google.com/p/https-finder/wiki/Help');" />                
+                    oncommand="gBrowser.selectedTab = gBrowser.addTab('https://github.com/g4jc/httpsinquirer/wiki/Help');" />                
             </menupopup>
         </menu>
     </menupopup>

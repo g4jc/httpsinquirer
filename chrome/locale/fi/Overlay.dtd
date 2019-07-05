@@ -12,13 +12,13 @@
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Rakentamispäivämäärä:">
 <!ENTITY httpsinquirer.authorTitle "Tekijä:">
-<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.googleCodeURL "https://github.com/g4jc/httpsinquirer/">
+<!ENTITY httpsinquirer.mySite "https://hyperbola.info">
 <!ENTITY httpsinquirer.preference.title "HTTPS Inquirer -asetukset">
 <!ENTITY httpsinquirer.preference.titleKey "P">
 <!ENTITY httpsinquirer.preference.translations "Kotoistamiset ovat tarjonneet seuraavat henkilöt:">
 <!ENTITY httpsinquirer.preference.supportTitle "Tukisähköpostiosoite:">
-<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.supportEmail "swdevel@hyperbola.info">
 <!ENTITY httpsinquirer.preference.enable "Ota käyttöön HTTPS Inquirer">
 <!ENTITY httpsinquirer.preference.noRulePrompt "Älä kysy HTTPS-säännön tallentamista (silloin kun HTTPS Always -ohjelmistoa ei käytetä)">
 <!ENTITY httpsinquirer.preference.autoForward "Pakota HTTPS automaattisesti silloin kun se on käytettävissä">

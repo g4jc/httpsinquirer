@@ -12,13 +12,13 @@
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Data wydania:">
 <!ENTITY httpsinquirer.authorTitle "Autor:">
-<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.googleCodeURL "https://github.com/g4jc/httpsinquirer/">
+<!ENTITY httpsinquirer.mySite "https://hyperbola.info">
 <!ENTITY httpsinquirer.preference.title "HTTPS Inquirer – ustawienia">
 <!ENTITY httpsinquirer.preference.titleKey "T">
 <!ENTITY httpsinquirer.preference.translations "Autorzy tłumaczeń:">
 <!ENTITY httpsinquirer.preference.supportTitle "E-mail pomocy:">
-<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.supportEmail "swdevel@hyperbola.info">
 <!ENTITY httpsinquirer.preference.enable "Włącz HTTPS Inquirer">
 <!ENTITY httpsinquirer.preference.noRulePrompt "Nie pytaj o zapisanie reguł przekierowań (do wykorzystania bez HTTPS Always)">
 <!ENTITY httpsinquirer.preference.autoForward "Automatycznie przekieruj na HTTPS, gdy jest dostępne">
