@@ -21,6 +21,7 @@
  */
 
 "use strict";
+Components.utils.import("resource://gre/modules/Services.jsm");
 
 const httpsfinder_INCLUDE = function(name, targetObj) {   
     let LOADER = Cc["@mozilla.org/moz/jssubscript-loader;1"].getService(Ci.mozIJSSubScriptLoader);
@@ -52,10 +53,7 @@ httpsfinder.Overlay = {
       
     init: function(){
         Cu.import("resource://hfShared/hfShared.js", httpsfinder);
-        
-        var prefs = Cc["@mozilla.org/preferences-service;1"]
-        .getService(Ci.nsIPrefBranch);
-        httpsfinder.prefs =  prefs.getBranch("extensions.httpsfinder.");
+        httpsfinder.prefs =  Services.prefs.getBranch("extensions.httpsfinder.");
 
         httpsfinder.Cookies = {};
         httpsfinder.Detect = {};
