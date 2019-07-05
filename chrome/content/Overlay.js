@@ -512,7 +512,7 @@ httpsfinder.Overlay = {
         }
 
         if(httpsfinder.Detect.hostsMatch(aBrowser.contentDocument.baseURIObject.host.toLowerCase(),host) && !redirectLoop){
-            aBrowser.loadURIWithFlags(requestURL, nsIWebNavigation.LOAD_FLAGS_REPLACE_HISTORY);
+            aBrowser.loadURIWithFlags(requestURL, Components.interfaces.nsIWebNavigation.LOAD_FLAGS_REPLACE_HISTORY);
             httpsfinder.Overlay.redirectedTab[index] = new Array();
             httpsfinder.Overlay.redirectedTab[index][0] = true;
             httpsfinder.Overlay.redirectedTab[index][1] = aBrowser.currentURI;
