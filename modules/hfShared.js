@@ -271,14 +271,12 @@ function getHostWithoutSub(fullHost){
 };
 
 function restartNow(){
-    var Application = Cc["@mozilla.org/fuel/application;1"].getService(Ci.fuelIApplication);
-    Application.restart();
+    Cc['@mozilla.org/toolkit/app-startup;1'].getService(Ci.nsIAppStartup)
+    .quit(Ci.nsIAppStartup.eAttemptQuit | Ci.nsIAppStartup.eRestart);
 };
 
 function alertRuleFinished(aDocument){ 
     //Check firefox version and use appropriate method
-    var Application = Cc["@mozilla.org/fuel/application;1"]
-        .getService(Ci.fuelIApplication);
     var windowMediator = Cc["@mozilla.org/appshell/window-mediator;1"]
         .getService(Ci.nsIWindowMediator);
     var prefService = Cc["@mozilla.org/preferences-service;1"]
@@ -305,12 +303,6 @@ function alertRuleFinished(aDocument){
             else if(addon != null)
                 promptForRestart();
         });
-    }
-    else{  //Firefox versions below 4.0
-        if(!Application.extensions.has("https-always@hyperbola.info"))
-            getHTTPSAlways();
-        else
-            promptForRestart();
     }
 
     //Alert user to install HTTPS Always for rule enforcement
