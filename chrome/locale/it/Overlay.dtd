@@ -1,80 +1,80 @@
 <!--Pref window sizing for different translated string lengths-->
-<!ENTITY httpsfinder.prefSize.windowWidth "515">
-<!ENTITY httpsfinder.prefSize.windowHeight "570">
-<!ENTITY httpsfinder.prefSize.detectDescWidth "450">
-<!ENTITY httpsfinder.prefSize.detectChkDescWidth "405">
+<!ENTITY httpsinquirer.prefSize.windowWidth "515">
+<!ENTITY httpsinquirer.prefSize.windowHeight "570">
+<!ENTITY httpsinquirer.prefSize.detectDescWidth "450">
+<!ENTITY httpsinquirer.prefSize.detectChkDescWidth "405">
 <!--End prefWindow sizing-->
 
 <!-- Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre  -->
 
-<!ENTITY httpsfinder.version "0.91">
-<!ENTITY httpsfinder.buildDate "9 Febbraio 2012">
-<!ENTITY httpsfinder.title "HTTPS Finder">
-<!ENTITY httpsfinder.buildDateTitle "Data di creazione:">
-<!ENTITY httpsfinder.authorTitle "Autore:">
-<!ENTITY httpsfinder.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsfinder.mySite "http://www.KevinAJacobs.com">
-<!ENTITY httpsfinder.preference.title "Preferenze di HTTPS Finder">
-<!ENTITY httpsfinder.preference.titleKey "H">
-<!ENTITY httpsfinder.preference.translations "Traduzioni offerte dalle seguenti persone:">
-<!ENTITY httpsfinder.preference.supportTitle "Email supporto:">
-<!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
-<!ENTITY httpsfinder.preference.enable "Attiva HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Non chiedere di salvare le regole HTTPS (Utilizza HTTPS Always)">
-<!ENTITY httpsfinder.preference.autoForward "Applica automaticamente HTTPS quando disponibile">
-<!ENTITY httpsfinder.preference.whitelistLabel "Whitelist domini (Non utilizzare HTTPS per questi domini)">
-<!ENTITY httpsfinder.preference.whitelistAddButton "Aggiungi alla whitelist">
-<!ENTITY httpsfinder.preference.whitelistModify "Modifica">
-<!ENTITY httpsfinder.preference.whitelistRemove "Rimuovi voce">
-<!ENTITY httpsfinder.preference.savedRulesTip "Il salvataggio delle regole può essere disabilitato nelle impostazioni di HTTPS Always.">
-<!ENTITY httpsfinder.preference.ruleTip "Nota che www.domain.com è sottodominio di domain.com">
-<!ENTITY httpsfinder.preference.learnMoreTip "Scopri di più su HTTPS Finder">
-<!ENTITY httpsfinder.preference.learnLinkName "qui">
-<!ENTITY httpsfinder.preference.whitelistAddTextbox "Hostname (domain.tld, sub.domain.tld, *.domain.tld)">
-<!ENTITY httpsfinder.preference.whitelistUrlColumn "Hostname">
-<!ENTITY httpsfinder.preference.headFirst "Prova a rilevare tramite richiesta HEAD prima (Invia richiesta GET al server se non possibile)">
-<!ENTITY httpsfinder.preference.generalTab "Generale">
-<!ENTITY httpsfinder.preference.advancedTab "Avanzate">
-<!ENTITY httpsfinder.preference.aboutTab "Info">
-<!ENTITY httpsfinder.preference.detectionLabel "Metodo di rilevamento">
-<!ENTITY httpsfinder.preference.showpreview "Mostra un'anteprima della regola (modificabile) prima di salvarla">
-<!ENTITY httpsfinder.preference.secureCookies "Garantisci cookies per i domini HTTPS validi">
-<!ENTITY httpsfinder.preference.secureWildcardCookies "Garantisci anche i wildcard cookies">
-<!ENTITY httpsfinder.preference.detectionDescLONG "Le richieste HEAD utilizzano meno banda di quelle GET, ma alcuni server potrebbero non supportarle. Se ciò accade, HTTPS Finder invierà una richiesta GET.">
-<!ENTITY httpsfinder.preference.detectionDescRec "Se hai una connessione veloce puoi deselezionare l'opzione per inviare solo richieste GET. In caso di connessione lenta le richieste HEAD dovrebbero essere risolte più velocemente per la maggior parte dei siti.">
-<!ENTITY httpsfinder.preference.debug "Attiva debug">
-<!ENTITY httpsfinder.rulePreview.top "Anteprima regola:">
-<!ENTITY httpsfinder.rulePreview.tip1 "Tutte le modifiche apportate saranno applicate alla regola salvata.">
-<!ENTITY httpsfinder.rulePreview.tip2 "Clicca su OK per salvare la regola, o su Cancella per tornare indietro senza salvare">
-<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
-<!ENTITY httpsfinder.rulePreview.clickhere "qui">
-<!ENTITY httpsfinder.rulePreview.learnmore "Scopri di più sulla formattazione delle regole">
-<!ENTITY httpsfinder.menu.settings "Preferenze">
-<!ENTITY httpsfinder.menu.settingsKey "P">
-<!ENTITY httpsfinder.menu.refresh "Cancella la whitelist temporanea">
-<!ENTITY httpsfinder.menu.refreshKey "C">
-<!ENTITY httpsfinder.menu.homepage "Pagina web del progetto">
-<!ENTITY httpsfinder.menu.homepageKey "P">
-<!ENTITY httpsfinder.menu.rate "Tasso velocità di HTTPS Finder">
-<!ENTITY httpsfinder.menu.rateKey "R">
-<!ENTITY httpsfinder.menu.help "Aiuto">
-<!ENTITY httpsfinder.menu.helpKey "H">
-<!ENTITY httpsfinder.preference.createRule "Crea regola">
-<!ENTITY httpsfinder.preference.sslReport "Genera rapporto SSL">
-<!ENTITY httpsfinder.preference.clearResults "Cancella tutti i risultati">
-<!ENTITY httpsfinder.preference.listHeaderHTTPS "Risultato HTTPS">
-<!ENTITY httpsfinder.preference.listHeaderTitle "Risultati della sessione di rilevamento">
-<!ENTITY httpsfinder.preference.autoDismissTitle "Nascondi avvisi automaticamente dopo (secondi)">
-<!ENTITY httpsfinder.preference.autoDismissToolTip "Durata (secondi)">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTooltip "Deseleziona per utilizzare solo il rilevamento silenzioso (Controlla i risultati e crea regole attraverso la scheda Avanzate)">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTitle "Abilita gli avvisi di rilevamento HTTPS (se l'opzione 'Applica automaticamente HTTPS' è disabilitata)">
-<!ENTITY httpsfinder.translation.german "- Tedesco (Michael Wolf &amp; Daniel Helmert)">
-<!ENTITY httpsfinder.translation.dutch "- Olandese (Donné Brok)">
-<!ENTITY httpsfinder.translation.polish "- Polacco (PcP)">
-<!ENTITY httpsfinder.translation.swedish "- Svedese (Mikael Hiort)">
-<!ENTITY httpsfinder.translation.spanish "- Spagnolo (strel)">
-<!ENTITY httpsfinder.translation.portuguese "- Portoghese (Megahertz)">
-<!ENTITY httpsfinder.translation.finnish "- Finlandese (Jorma Karvonen)">
-<!ENTITY httpsfinder.translation.chinese "- Cinese (Christopher Meng)">
-<!ENTITY httpsfinder.translation.taiwan "- Cinese (Taiwan) (swda289346)">
-<!ENTITY httpsfinder.translation.italian "- Italiano (Walter Purcaro)">
+<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.buildDate "9 Febbraio 2012">
+<!ENTITY httpsinquirer.title "HTTPS Inquirer">
+<!ENTITY httpsinquirer.buildDateTitle "Data di creazione:">
+<!ENTITY httpsinquirer.authorTitle "Autore:">
+<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
+<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.preference.title "Preferenze di HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.titleKey "H">
+<!ENTITY httpsinquirer.preference.translations "Traduzioni offerte dalle seguenti persone:">
+<!ENTITY httpsinquirer.preference.supportTitle "Email supporto:">
+<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.enable "Attiva HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.noRulePrompt "Non chiedere di salvare le regole HTTPS (Utilizza HTTPS Always)">
+<!ENTITY httpsinquirer.preference.autoForward "Applica automaticamente HTTPS quando disponibile">
+<!ENTITY httpsinquirer.preference.whitelistLabel "Whitelist domini (Non utilizzare HTTPS per questi domini)">
+<!ENTITY httpsinquirer.preference.whitelistAddButton "Aggiungi alla whitelist">
+<!ENTITY httpsinquirer.preference.whitelistModify "Modifica">
+<!ENTITY httpsinquirer.preference.whitelistRemove "Rimuovi voce">
+<!ENTITY httpsinquirer.preference.savedRulesTip "Il salvataggio delle regole può essere disabilitato nelle impostazioni di HTTPS Always.">
+<!ENTITY httpsinquirer.preference.ruleTip "Nota che www.domain.com è sottodominio di domain.com">
+<!ENTITY httpsinquirer.preference.learnMoreTip "Scopri di più su HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.learnLinkName "qui">
+<!ENTITY httpsinquirer.preference.whitelistAddTextbox "Hostname (domain.tld, sub.domain.tld, *.domain.tld)">
+<!ENTITY httpsinquirer.preference.whitelistUrlColumn "Hostname">
+<!ENTITY httpsinquirer.preference.headFirst "Prova a rilevare tramite richiesta HEAD prima (Invia richiesta GET al server se non possibile)">
+<!ENTITY httpsinquirer.preference.generalTab "Generale">
+<!ENTITY httpsinquirer.preference.advancedTab "Avanzate">
+<!ENTITY httpsinquirer.preference.aboutTab "Info">
+<!ENTITY httpsinquirer.preference.detectionLabel "Metodo di rilevamento">
+<!ENTITY httpsinquirer.preference.showpreview "Mostra un'anteprima della regola (modificabile) prima di salvarla">
+<!ENTITY httpsinquirer.preference.secureCookies "Garantisci cookies per i domini HTTPS validi">
+<!ENTITY httpsinquirer.preference.secureWildcardCookies "Garantisci anche i wildcard cookies">
+<!ENTITY httpsinquirer.preference.detectionDescLONG "Le richieste HEAD utilizzano meno banda di quelle GET, ma alcuni server potrebbero non supportarle. Se ciò accade, HTTPS Inquirer invierà una richiesta GET.">
+<!ENTITY httpsinquirer.preference.detectionDescRec "Se hai una connessione veloce puoi deselezionare l'opzione per inviare solo richieste GET. In caso di connessione lenta le richieste HEAD dovrebbero essere risolte più velocemente per la maggior parte dei siti.">
+<!ENTITY httpsinquirer.preference.debug "Attiva debug">
+<!ENTITY httpsinquirer.rulePreview.top "Anteprima regola:">
+<!ENTITY httpsinquirer.rulePreview.tip1 "Tutte le modifiche apportate saranno applicate alla regola salvata.">
+<!ENTITY httpsinquirer.rulePreview.tip2 "Clicca su OK per salvare la regola, o su Cancella per tornare indietro senza salvare">
+<!ENTITY httpsinquirer.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
+<!ENTITY httpsinquirer.rulePreview.clickhere "qui">
+<!ENTITY httpsinquirer.rulePreview.learnmore "Scopri di più sulla formattazione delle regole">
+<!ENTITY httpsinquirer.menu.settings "Preferenze">
+<!ENTITY httpsinquirer.menu.settingsKey "P">
+<!ENTITY httpsinquirer.menu.refresh "Cancella la whitelist temporanea">
+<!ENTITY httpsinquirer.menu.refreshKey "C">
+<!ENTITY httpsinquirer.menu.homepage "Pagina web del progetto">
+<!ENTITY httpsinquirer.menu.homepageKey "P">
+<!ENTITY httpsinquirer.menu.rate "Tasso velocità di HTTPS Inquirer">
+<!ENTITY httpsinquirer.menu.rateKey "R">
+<!ENTITY httpsinquirer.menu.help "Aiuto">
+<!ENTITY httpsinquirer.menu.helpKey "H">
+<!ENTITY httpsinquirer.preference.createRule "Crea regola">
+<!ENTITY httpsinquirer.preference.sslReport "Genera rapporto SSL">
+<!ENTITY httpsinquirer.preference.clearResults "Cancella tutti i risultati">
+<!ENTITY httpsinquirer.preference.listHeaderHTTPS "Risultato HTTPS">
+<!ENTITY httpsinquirer.preference.listHeaderTitle "Risultati della sessione di rilevamento">
+<!ENTITY httpsinquirer.preference.autoDismissTitle "Nascondi avvisi automaticamente dopo (secondi)">
+<!ENTITY httpsinquirer.preference.autoDismissToolTip "Durata (secondi)">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTooltip "Deseleziona per utilizzare solo il rilevamento silenzioso (Controlla i risultati e crea regole attraverso la scheda Avanzate)">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTitle "Abilita gli avvisi di rilevamento HTTPS (se l'opzione 'Applica automaticamente HTTPS' è disabilitata)">
+<!ENTITY httpsinquirer.translation.german "- Tedesco (Michael Wolf &amp; Daniel Helmert)">
+<!ENTITY httpsinquirer.translation.dutch "- Olandese (Donné Brok)">
+<!ENTITY httpsinquirer.translation.polish "- Polacco (PcP)">
+<!ENTITY httpsinquirer.translation.swedish "- Svedese (Mikael Hiort)">
+<!ENTITY httpsinquirer.translation.spanish "- Spagnolo (strel)">
+<!ENTITY httpsinquirer.translation.portuguese "- Portoghese (Megahertz)">
+<!ENTITY httpsinquirer.translation.finnish "- Finlandese (Jorma Karvonen)">
+<!ENTITY httpsinquirer.translation.chinese "- Cinese (Christopher Meng)">
+<!ENTITY httpsinquirer.translation.taiwan "- Cinese (Taiwan) (swda289346)">
+<!ENTITY httpsinquirer.translation.italian "- Italiano (Walter Purcaro)">

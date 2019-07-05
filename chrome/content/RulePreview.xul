@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<!DOCTYPE overlay SYSTEM "chrome://httpsfinder/locale/Overlay.dtd">
+<!DOCTYPE overlay SYSTEM "chrome://httpsinquirer/locale/Overlay.dtd">
 <dialog
-    title="&httpsfinder.title;"
+    title="&httpsinquirer.title;"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
     xmlns:html="http://www.w3.org/1999/xhtml"
     buttons="accept,cancel"
-    onload="httpsfinder.RulePreview.httpsfinderLoadRulePreview(document)"
-    ondialogaccept="return httpsfinder.RulePreview.httpsfinderOkRulePreview();">
+    onload="httpsinquirer.RulePreview.httpsinquirerLoadRulePreview(document)"
+    ondialogaccept="return httpsinquirer.RulePreview.httpsinquirerOkRulePreview();">
     <script type="application/x-javascript" src="RulePreview.js"/>
     <grid>
         <columns>
@@ -18,26 +18,26 @@
                     <rows>
                         <row>
                             <vbox>
-                                <label control="rule" value="&httpsfinder.rulePreview.top;"/>
+                                <label control="rule" value="&httpsinquirer.rulePreview.top;"/>
                                 <textbox id="ruleBox" multiline="true" cols="80" rows="9"/>
                             </vbox>
                         </row>
                         <row>
-                            <label value="&httpsfinder.rulePreview.tip1;" control="tip1"/>
+                            <label value="&httpsinquirer.rulePreview.tip1;" control="tip1"/>
                         </row>
                         <vbox>
                             <row>
-                                <label value="&httpsfinder.rulePreview.learnmore;" control="more"/>
+                                <label value="&httpsinquirer.rulePreview.learnmore;" control="more"/>
                                 <label id="ruleslink"
-                                         value="&httpsfinder.rulePreview.clickhere;"
+                                         value="&httpsinquirer.rulePreview.clickhere;"
                                          style="color: blue; text-decoration:underline;"
                                          onmouseover="event.target.style.cursor='pointer'"
                                          onmouseout="event.target.style.cursor='default'"
-                                        onclick="window.open('&httpsfinder.rulePreview.link;')"/>
+                                        onclick="window.open('&httpsinquirer.rulePreview.link;')"/>
                             </row>
                         </vbox>
                         <row>
-                            <label value="&httpsfinder.rulePreview.tip2;" control="tip2"/>
+                            <label value="&httpsinquirer.rulePreview.tip2;" control="tip2"/>
                         </row>
                         <separator class="thin"/>
                     </rows>

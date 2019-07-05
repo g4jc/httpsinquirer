@@ -2,8 +2,8 @@
  * HTTPSDetect.js handles background Detection and http observation
  */
 
-httpsfinder.Cookies = {};
-httpsfinder_INCLUDE('Cookies', httpsfinder.Cookies);
+httpsinquirer.Cookies = {};
+httpsinquirer_INCLUDE('Cookies', httpsinquirer.Cookies);
 var OS = Cc["@mozilla.org/observer-service;1"]
         .getService(Ci.nsIObserverService);
 ////Not a great solution, but this is for problematic domains.
@@ -19,62 +19,62 @@ function QueryInterface(aIID) {
 function observe(request, aTopic, aData) {
     if (aTopic == "http-on-examine-response") {
         request.QueryInterface(Ci.nsIHttpChannel);
-        if (!httpsfinder.prefs.getBoolPref("enable"))
+        if (!httpsinquirer.prefs.getBoolPref("enable"))
             return;
         if ((request.responseStatus == 200 || request.responseStatus == 301
                 || request.responseStatus == 304) && request.URI.scheme == "http")
-            var loadFlags = httpsfinder.Detect.getStringArrayOfLoadFlags(request.loadFlags);
+            var loadFlags = httpsinquirer.Detect.getStringArrayOfLoadFlags(request.loadFlags);
         else
             return;
         if (loadFlags.indexOf("LOAD_DOCUMENT_URI") != -1 && loadFlags.indexOf("LOAD_INITIAL_DOCUMENT_URI") != -1) {
-            if (httpsfinder.Overlay.isWhitelisted(request.URI.host.toLowerCase())) {
-                if (httpsfinder.debug)
+            if (httpsinquirer.Overlay.isWhitelisted(request.URI.host.toLowerCase())) {
+                if (httpsinquirer.debug)
                     dump("Canceling Detection on " + request.URI.host.toLowerCase() + ". Host is whitelisted\n");
                 return;
             }
-            var browser = httpsfinder.Detect.getBrowserFromChannel(request);
+            var browser = httpsinquirer.Detect.getBrowserFromChannel(request);
             if (browser == null) {
-                if (httpsfinder.debug)
-                    dump("httpsfinder browser cannot be found for channel\n");
+                if (httpsinquirer.debug)
+                    dump("httpsinquirer browser cannot be found for channel\n");
                 return;
             }
 
             var host = request.URI.host.toLowerCase();
             try {
-                if (httpsfinder.Detect.hostsMatch(browser.contentDocument.baseURIObject.host.toLowerCase(), host) &&
-                        httpsfinder.results.goodSSL.indexOf(request.URI.host.toLowerCase()) != -1) {
-                    if (httpsfinder.debug)
+                if (httpsinquirer.Detect.hostsMatch(browser.contentDocument.baseURIObject.host.toLowerCase(), host) &&
+                        httpsinquirer.results.goodSSL.indexOf(request.URI.host.toLowerCase()) != -1) {
+                    if (httpsinquirer.debug)
                         dump("Canceling Detection on " + request.URI.host.toLowerCase() + ". Good SSL already cached for host.\n");
-                    httpsfinder.Detect.handleCachedSSL(browser, request);
+                    httpsinquirer.Detect.handleCachedSSL(browser, request);
                     return;
                 }
             } catch (e) {
                 if (e.name == 'NS_ERROR_FAILURE')
-                    dump("HTTPS Finder: cannot match URI to browser request.\n");
+                    dump("HTTPS Inquirer: cannot match URI to browser request.\n");
             }
 
 //Push to whitelist so we don't spam with multiple Detection requests - may be removed later depending on result
-            if (!httpsfinder.Overlay.isWhitelisted(host) &&
-                    !httpsfinder.pbs.privateBrowsingEnabled) {
-                httpsfinder.results.whitelist.push(host);
-                if (httpsfinder.debug) {
-                    dump("httpsfinder Blocking Detection on " + request.URI.host + " until OK response received\n");
-                    dump("httpsfinder Starting HTTPS Detection for " + request.URI.asciiSpec + "\n");
+            if (!httpsinquirer.Overlay.isWhitelisted(host) &&
+                    !httpsinquirer.pbs.privateBrowsingEnabled) {
+                httpsinquirer.results.whitelist.push(host);
+                if (httpsinquirer.debug) {
+                    dump("httpsinquirer Blocking Detection on " + request.URI.host + " until OK response received\n");
+                    dump("httpsinquirer Starting HTTPS Detection for " + request.URI.asciiSpec + "\n");
                 }
             }
 
-            httpsfinder.Detect.detectSSL(browser, request);
+            httpsinquirer.Detect.detectSSL(browser, request);
         }
     }
 }
 
 function register() {
-    OS.addObserver(httpsfinder.Detect, "http-on-examine-response", false);
+    OS.addObserver(httpsinquirer.Detect, "http-on-examine-response", false);
 }
 
 function unregister() {
     try {
-        OS.removeObserver(httpsfinder.Detect, "http-on-examine-response");
+        OS.removeObserver(httpsinquirer.Detect, "http-on-examine-response");
     }
     catch (e) {/* already removed if enabled pref is false */
     }
@@ -92,7 +92,7 @@ function hostsMatch(host1, host2) {
 function detectSSL(aBrowser, request) {
     var requestURL = request.URI.asciiSpec.replace("http://", "https://");
     //If user preference specifies GET Detection only
-    if (!httpsfinder.prefs.getBoolPref("headfirst")) {
+    if (!httpsinquirer.prefs.getBoolPref("headfirst")) {
         var getReq = new XMLHttpRequest();
         getReq.mozBackgroundRequest = true;
         getReq.open('GET', requestURL, true);
@@ -115,9 +115,9 @@ function detectSSL(aBrowser, request) {
             if (headReq.readyState == 4) {
                 if (headReq.status == 200 || headReq.status == 0 ||
                         (headReq.status != 405 && headReq.status != 403))
-                    httpsfinder.Detect.handleDetectionResponse(aBrowser, headReq);
+                    httpsinquirer.Detect.handleDetectionResponse(aBrowser, headReq);
                 else if (headReq.status == 405 || headReq.status == 403) {
-                    dump("httpsfinder Detection falling back to GET for " + requestURL + "\n");
+                    dump("httpsinquirer Detection falling back to GET for " + requestURL + "\n");
                     var getReq = new XMLHttpRequest();
                     getReq.mozBackgroundRequest = true;
                     getReq.open('GET', requestURL, true);
@@ -166,37 +166,37 @@ function getBrowserFromChannel(aChannel) {
 function handleCachedSSL(aBrowser, request) {
     if (request.responseStatus != 200 && request.responseStatus != 301 && request.responseStatus != 302)
         return;
-    if (!httpsfinder.Overlay.isWhitelisted(aBrowser.currentURI.host))
-        httpsfinder.Cookies.goodSSLFound(aBrowser.currentURI.host);
+    if (!httpsinquirer.Overlay.isWhitelisted(aBrowser.currentURI.host))
+        httpsinquirer.Cookies.goodSSLFound(aBrowser.currentURI.host);
     var nb = gBrowser.getNotificationBox(aBrowser);
     var sslFoundButtons = [{
-            label: httpsfinder.strings.getString("httpsfinder.main.whitelist"),
-            accessKey: httpsfinder.strings.getString("httpsfinder.main.whitelistKey"),
+            label: httpsinquirer.strings.getString("httpsinquirer.main.whitelist"),
+            accessKey: httpsinquirer.strings.getString("httpsinquirer.main.whitelistKey"),
             popup: null,
-            callback: httpsfinder.Overlay.whitelistDomain
+            callback: httpsinquirer.Overlay.whitelistDomain
         }, {
-            label: httpsfinder.strings.getString("httpsfinder.main.noRedirect"),
-            accessKey: httpsfinder.strings.getString("httpsfinder.main.noRedirectKey"),
+            label: httpsinquirer.strings.getString("httpsinquirer.main.noRedirect"),
+            accessKey: httpsinquirer.strings.getString("httpsinquirer.main.noRedirectKey"),
             popup: null,
-            callback: httpsfinder.Overlay.redirectNotNow
+            callback: httpsinquirer.Overlay.redirectNotNow
         }, {
-            label: httpsfinder.strings.getString("httpsfinder.main.yesRedirect"),
-            accessKey: httpsfinder.strings.getString("httpsfinder.main.yesRedirectKey"),
+            label: httpsinquirer.strings.getString("httpsinquirer.main.yesRedirect"),
+            accessKey: httpsinquirer.strings.getString("httpsinquirer.main.yesRedirectKey"),
             popup: null,
-            callback: httpsfinder.Overlay.redirect
+            callback: httpsinquirer.Overlay.redirect
         }];
-    if (httpsfinder.prefs.getBoolPref("autoforward"))
-        httpsfinder.Overlay.redirectAuto(aBrowser, request);
-    else if (httpsfinder.results.tempNoAlerts.indexOf(request.URI.host) == -1 &&
-            httpsfinder.prefs.getBoolPref("httpsfoundalert")) {
+    if (httpsinquirer.prefs.getBoolPref("autoforward"))
+        httpsinquirer.Overlay.redirectAuto(aBrowser, request);
+    else if (httpsinquirer.results.tempNoAlerts.indexOf(request.URI.host) == -1 &&
+            httpsinquirer.prefs.getBoolPref("httpsfoundalert")) {
 
-        nb.appendNotification(httpsfinder.strings.getString("httpsfinder.main.httpsFoundPrompt"),
-                "httpsfinder-https-found", 'chrome://httpsfinder/skin/httpsAvailable.png',
+        nb.appendNotification(httpsinquirer.strings.getString("httpsinquirer.main.httpsFoundPrompt"),
+                "httpsinquirer-https-found", 'chrome://httpsinquirer/skin/httpsAvailable.png',
                 nb.PRIORITY_INFO_HIGH, sslFoundButtons);
-        if (httpsfinder.prefs.getBoolPref("dismissAlerts"))
+        if (httpsinquirer.prefs.getBoolPref("dismissAlerts"))
             setTimeout(function() {
-                httpsfinder.removeNotification("httpsfinder-https-found")
-            }, httpsfinder.prefs.getIntPref("alertDismissTime") * 1000, 'httpsfinder-https-found');
+                httpsinquirer.removeNotification("httpsinquirer-https-found")
+            }, httpsinquirer.prefs.getIntPref("alertDismissTime") * 1000, 'httpsinquirer-https-found');
     }
 }
 
@@ -205,88 +205,88 @@ function handleDetectionResponse(aBrowser, sslTest) {
 //Session whitelist host and return if cert is bad or status is not OK.
     var host = sslTest.channel.URI.host.toLowerCase();
     var request = sslTest.channel;
-    var cacheExempt = (httpsfinder.Detect.cacheExempt.indexOf(host) != -1) ? true : false;
+    var cacheExempt = (httpsinquirer.Detect.cacheExempt.indexOf(host) != -1) ? true : false;
     if (cacheExempt) {
-        if (httpsfinder.debug)
-            dump("httpsfinder removing " + host + " from whitelist (exempt from saving results on this host)\n");
-        httpsfinder.Overlay.removeFromWhitelist(null, aBrowser.contentDocument.baseURIObject.host.toLowerCase());
+        if (httpsinquirer.debug)
+            dump("httpsinquirer removing " + host + " from whitelist (exempt from saving results on this host)\n");
+        httpsinquirer.Overlay.removeFromWhitelist(null, aBrowser.contentDocument.baseURIObject.host.toLowerCase());
     }
 
     var Codes = [200, 301, 302, 0];
-    if (Codes.indexOf(sslTest.status) == -1 && httpsfinder.results.goodSSL.indexOf(host) == -1) {
-        if (httpsfinder.debug)
-            dump("httpsfinder leaving " + host + " in whitelist (return status code " + sslTest.status + ")\n");
+    if (Codes.indexOf(sslTest.status) == -1 && httpsinquirer.results.goodSSL.indexOf(host) == -1) {
+        if (httpsinquirer.debug)
+            dump("httpsinquirer leaving " + host + " in whitelist (return status code " + sslTest.status + ")\n");
         return;
     }
-    else if (sslTest.status == 0 && !httpsfinder.Detect.testCertificate(request) && httpsfinder.results.goodSSL.indexOf(host) == -1) {
-        if (httpsfinder.debug)
-            dump("httpsfinder leaving " + host + " in whitelist (bad SSL certificate)\n");
+    else if (sslTest.status == 0 && !httpsinquirer.Detect.testCertificate(request) && httpsinquirer.results.goodSSL.indexOf(host) == -1) {
+        if (httpsinquirer.debug)
+            dump("httpsinquirer leaving " + host + " in whitelist (bad SSL certificate)\n");
         return;
     }
-    else if (!httpsfinder.Detect.testCertificate(request) && httpsfinder.results.goodSSL.indexOf(host) == -1) {
-        if (httpsfinder.debug)
-            dump("httpsfinder leaving " + host + " in whitelist (bad SSL certificate)\n");
+    else if (!httpsinquirer.Detect.testCertificate(request) && httpsinquirer.results.goodSSL.indexOf(host) == -1) {
+        if (httpsinquirer.debug)
+            dump("httpsinquirer leaving " + host + " in whitelist (bad SSL certificate)\n");
         return;
     }
     else
-        httpsfinder.Overlay.removeFromWhitelist(null, host);
+        httpsinquirer.Overlay.removeFromWhitelist(null, host);
     //If the code gets to this point, the HTTPS is good.
     //Push host to good SSL list (remember result and skip repeat Detection)
-    if (httpsfinder.results.goodSSL.indexOf(host) == -1 && !httpsfinder.pbs.privateBrowsingEnabled) {
-        if (httpsfinder.debug)
+    if (httpsinquirer.results.goodSSL.indexOf(host) == -1 && !httpsinquirer.pbs.privateBrowsingEnabled) {
+        if (httpsinquirer.debug)
             dump("Pushing " + host + " to good SSL list\n");
-        httpsfinder.Overlay.removeFromWhitelist(null, host);
+        httpsinquirer.Overlay.removeFromWhitelist(null, host);
         if (!cacheExempt)
-            httpsfinder.Detect.addHostToGoodSSLList(host);
+            httpsinquirer.Detect.addHostToGoodSSLList(host);
     }
-    else if (!httpsfinder.results.goodSSL.indexOf(aBrowser.contentDocument.baseURIObject.host.toLowerCase()) == -1
-            && !httpsfinder.pbs.privateBrowsingEnabled) {
+    else if (!httpsinquirer.results.goodSSL.indexOf(aBrowser.contentDocument.baseURIObject.host.toLowerCase()) == -1
+            && !httpsinquirer.pbs.privateBrowsingEnabled) {
         var altHost = aBrowser.contentDocument.baseURIObject.host.toLowerCase();
-        if (httpsfinder.debug)
+        if (httpsinquirer.debug)
             dump("Pushing " + altHost + " to good SSL list.\n");
-        httpsfinder.Overlay.removeFromWhitelist(null, altHost);
+        httpsinquirer.Overlay.removeFromWhitelist(null, altHost);
         if (!cacheExempt)
-            httpsfinder.Detect.addHostToGoodSSLList(altHost);
+            httpsinquirer.Detect.addHostToGoodSSLList(altHost);
     }
 
 //Check setting and automatically enforce HTTPS
-    if (httpsfinder.prefs.getBoolPref("autoforward"))
-        httpsfinder.Overlay.redirectAuto(aBrowser, request);
+    if (httpsinquirer.prefs.getBoolPref("autoforward"))
+        httpsinquirer.Overlay.redirectAuto(aBrowser, request);
     //If auto-enforce is disabled, if host is not in tempNoAlerts (rule already saved)
     //and HTTPS Found alerts are enabled, alert user of good HTTPS
-    else if (httpsfinder.results.tempNoAlerts.indexOf(request.URI.host) == -1 &&
-            httpsfinder.prefs.getBoolPref("httpsfoundalert")) {
-        if (httpsfinder.Detect.hostsMatch(aBrowser.contentDocument.baseURIObject.host.toLowerCase(), host)) {
+    else if (httpsinquirer.results.tempNoAlerts.indexOf(request.URI.host) == -1 &&
+            httpsinquirer.prefs.getBoolPref("httpsfoundalert")) {
+        if (httpsinquirer.Detect.hostsMatch(aBrowser.contentDocument.baseURIObject.host.toLowerCase(), host)) {
 
             var nb = gBrowser.getNotificationBox(aBrowser);
             var sslFoundButtons = [{
-                    label: httpsfinder.strings.getString("httpsfinder.main.whitelist"),
-                    accessKey: httpsfinder.strings.getString("httpsfinder.main.whitelistKey"),
+                    label: httpsinquirer.strings.getString("httpsinquirer.main.whitelist"),
+                    accessKey: httpsinquirer.strings.getString("httpsinquirer.main.whitelistKey"),
                     popup: null,
-                    callback: httpsfinder.Overlay.whitelistDomain
+                    callback: httpsinquirer.Overlay.whitelistDomain
                 }, {
-                    label: httpsfinder.strings.getString("httpsfinder.main.noRedirect"),
-                    accessKey: httpsfinder.strings.getString("httpsfinder.main.noRedirectKey"),
+                    label: httpsinquirer.strings.getString("httpsinquirer.main.noRedirect"),
+                    accessKey: httpsinquirer.strings.getString("httpsinquirer.main.noRedirectKey"),
                     popup: null,
-                    callback: httpsfinder.Overlay.redirectNotNow
+                    callback: httpsinquirer.Overlay.redirectNotNow
                 }, {
-                    label: httpsfinder.strings.getString("httpsfinder.main.yesRedirect"),
-                    accessKey: httpsfinder.strings.getString("httpsfinder.main.yesRedirectKey"),
+                    label: httpsinquirer.strings.getString("httpsinquirer.main.yesRedirect"),
+                    accessKey: httpsinquirer.strings.getString("httpsinquirer.main.yesRedirectKey"),
                     popup: null,
-                    callback: httpsfinder.Overlay.redirect
+                    callback: httpsinquirer.Overlay.redirect
                 }];
-            nb.appendNotification(httpsfinder.strings.getString("httpsfinder.main.httpsFoundPrompt"),
-                    "httpsfinder-https-found", 'chrome://httpsfinder/skin/httpsAvailable.png',
+            nb.appendNotification(httpsinquirer.strings.getString("httpsinquirer.main.httpsFoundPrompt"),
+                    "httpsinquirer-https-found", 'chrome://httpsinquirer/skin/httpsAvailable.png',
                     nb.PRIORITY_INFO_HIGH, sslFoundButtons);
-            httpsfinder.Overlay.removeFromWhitelist(aBrowser.contentDocument, null);
-            if (httpsfinder.prefs.getBoolPref("dismissAlerts"))
+            httpsinquirer.Overlay.removeFromWhitelist(aBrowser.contentDocument, null);
+            if (httpsinquirer.prefs.getBoolPref("dismissAlerts"))
                 setTimeout(function() {
-                    httpsfinder.removeNotification("httpsfinder-https-found")
-                }, httpsfinder.prefs.getIntPref("alertDismissTime") * 1000, 'httpsfinder-https-found');
+                    httpsinquirer.removeNotification("httpsinquirer-https-found")
+                }, httpsinquirer.prefs.getIntPref("alertDismissTime") * 1000, 'httpsinquirer-https-found');
         }
         else {
 //Catches certain browser location changes and page content that had load flags to fire Detection
-            if (httpsfinder.debug)
+            if (httpsinquirer.debug)
                 dump("Host mismatch, alert blocked (Document: " +
                         aBrowser.contentDocument.baseURIObject.host.toLowerCase() + " , Detection host: " + host + "\n");
         }
@@ -294,8 +294,8 @@ function handleDetectionResponse(aBrowser, sslTest) {
 }
 
 function addHostToGoodSSLList(host) {
-    httpsfinder.results.goodSSL.push(host);
-    httpsfinder.Cookies.goodSSLFound(host);
+    httpsinquirer.results.goodSSL.push(host);
+    httpsinquirer.Cookies.goodSSLFound(host);
 }
 
 // Adapted from the patch for mozTCPSocket error reporting (bug 861196).
@@ -428,15 +428,15 @@ function testCertificate(channel) {
         }
         if (!secure){
             dump(createTCPErrorFromFailedXHR(channel));
-            Cu.reportError("HTTPS Finder: testCertificate error: " + err.toString() + "\n");
+            Cu.reportError("HTTPS Inquirer: testCertificate error: " + err.toString() + "\n");
         }
     }
     catch (err) {
         secure = false;
-        Cu.reportError("HTTPS Finder: testCertificate error: " + err.toString() + "\n");
+        Cu.reportError("HTTPS Inquirer: testCertificate error: " + err.toString() + "\n");
     }
-    if (httpsfinder.debug && secure)
-        dump("httpsfinder testCertificate: cert OK (on " +
+    if (httpsinquirer.debug && secure)
+        dump("httpsinquirer testCertificate: cert OK (on " +
                 channel.URI.host.toLowerCase() + ")\n");
     return secure;
 }

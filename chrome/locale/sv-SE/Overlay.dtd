@@ -1,80 +1,80 @@
 <!--Pref window sizing for different translated string lengths-->
-<!ENTITY httpsfinder.prefSize.windowWidth "515">
-<!ENTITY httpsfinder.prefSize.windowHeight "570">
-<!ENTITY httpsfinder.prefSize.detectDescWidth "450">
-<!ENTITY httpsfinder.prefSize.detectChkDescWidth "405">
+<!ENTITY httpsinquirer.prefSize.windowWidth "515">
+<!ENTITY httpsinquirer.prefSize.windowHeight "570">
+<!ENTITY httpsinquirer.prefSize.detectDescWidth "450">
+<!ENTITY httpsinquirer.prefSize.detectChkDescWidth "405">
 <!--End prefWindow sizing-->
 
 <!--januari februari mars april maj juni juli augusti september oktober november december -->
 
-<!ENTITY httpsfinder.version "0.91">
-<!ENTITY httpsfinder.buildDate "den 9 februari 2012">
-<!ENTITY httpsfinder.title "HTTPS Finder">
-<!ENTITY httpsfinder.buildDateTitle "Versionsdatum:">
-<!ENTITY httpsfinder.authorTitle "Skapat av:">
-<!ENTITY httpsfinder.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsfinder.mySite "http://www.KevinAJacobs.com">
-<!ENTITY httpsfinder.preference.title "Inställningar för HTTPS Finder">
-<!ENTITY httpsfinder.preference.titleKey "H">
-<!ENTITY httpsfinder.preference.translations "Översättningar har gjorts av följande personer:">
-<!ENTITY httpsfinder.preference.supportTitle "E-postadress till support:">
-<!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
-<!ENTITY httpsfinder.preference.enable "Aktivera HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Visa ingen uppmaning att spara HTTPS-regel (för användning utan HTTPS Always)">
-<!ENTITY httpsfinder.preference.autoForward "Tvinga HTTPS automatiskt, om tillgängligt">
-<!ENTITY httpsfinder.preference.whitelistLabel "Betrodda domäner (identifiera inte HTTPS på dessa domäner)">
-<!ENTITY httpsfinder.preference.whitelistAddButton "Lägg till">
-<!ENTITY httpsfinder.preference.whitelistModify "Ändra">
-<!ENTITY httpsfinder.preference.whitelistRemove "Ta bort">
-<!ENTITY httpsfinder.preference.savedRulesTip "Sparade regler kan inaktiveras i HTTPS Alwayss inställningar.">
-<!ENTITY httpsfinder.preference.ruleTip "För betrodda domäner: Notera att www.domän.se är en underdomän av domän.se.">
-<!ENTITY httpsfinder.preference.learnMoreTip "Läs mer om HTTPS Finder">
-<!ENTITY httpsfinder.preference.learnLinkName "här">
-<!ENTITY httpsfinder.preference.whitelistAddTextbox "Värdnamn (domän.tld, udomän.domän.tld, *.domän.tld)">
-<!ENTITY httpsfinder.preference.whitelistUrlColumn "Värdnamn">
-<!ENTITY httpsfinder.preference.headFirst "Använd HEAD-identifiering först (använd GET istället om servern inte stödjer HEAD)">
-<!ENTITY httpsfinder.preference.generalTab "Allmänt">
-<!ENTITY httpsfinder.preference.advancedTab "Avancerat">
-<!ENTITY httpsfinder.preference.aboutTab "Om">
-<!ENTITY httpsfinder.preference.detectionLabel "Identifieringsmetod">
-<!ENTITY httpsfinder.preference.showpreview "Visa förhandsgranskning (medger redigering) innan regler sparas">
-<!ENTITY httpsfinder.preference.detectionDescLONG "HEAD-begäranden använder mindre bandbredd än GET, men vissa servrar stödjer dem inte. Om det händer försöker HTTPS Finder istället använda en GET-begäran.">
-<!ENTITY httpsfinder.preference.detectionDescRec "Rekommenderad inställning: Om du har en snabb anslutning, avmarkera för att endast använda GET.  För långsammare anslutningar kan HEAD vara märkbart snabbare på de flesta webbplatser.">
-<!ENTITY httpsfinder.preference.debug "Aktivera felsökningsloggning (utförlig)">
-<!ENTITY httpsfinder.preference.createRule "Skapa regel">
-<!ENTITY httpsfinder.preference.sslReport "Generera SSL-rapport">
-<!ENTITY httpsfinder.preference.clearResults "Rensa alla resultat">
-<!ENTITY httpsfinder.preference.listHeaderHTTPS "HTTPS-resultat">
-<!ENTITY httpsfinder.preference.listHeaderTitle "Identifikationsresultat för sessionen">
-<!ENTITY httpsfinder.preference.autoDismissTitle "Stäng meddelanden automatiskt efter (sekunder)">
-<!ENTITY httpsfinder.preference.autoDismissToolTip "Varaktighet (sekunder)">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTooltip "Avmarkera för att endast köra tyst identifiering. Granska resultat och skapa regler under fliken Avancerat">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTitle "Aktivera meddelanden när HTTPS hittas (om &quot;Tvinga HTTPS automatiskt&quot; är inaktiverat)">
-<!ENTITY httpsfinder.preference.secureCookies "Använd säkra kakor för giltiga HTTPS-domäner">
-<!ENTITY httpsfinder.preference.secureWildcardCookies "Använd även säkra jokerkakor för HTTPS-domäner">
-<!ENTITY httpsfinder.rulePreview.top "Förhandsgranskning:">
-<!ENTITY httpsfinder.rulePreview.tip1 "Alla ändringar du gör kommer att återspeglas i den sparade regeln.">
-<!ENTITY httpsfinder.rulePreview.tip2 "Klicka på OK för att spara regeln eller Avbryt för att gå tillbaka utan att spara">
-<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
-<!ENTITY httpsfinder.rulePreview.clickhere "här">
-<!ENTITY httpsfinder.rulePreview.learnmore "Läs mer om regelformatering">
-<!ENTITY httpsfinder.menu.settings "Inställningar">
-<!ENTITY httpsfinder.menu.settingsKey "I">
-<!ENTITY httpsfinder.menu.refresh "Rensa temporär lista">
-<!ENTITY httpsfinder.menu.refreshKey "R">
-<!ENTITY httpsfinder.menu.homepage "Projektets webbplats">
-<!ENTITY httpsfinder.menu.homepageKey "P">
-<!ENTITY httpsfinder.menu.rate "Betygsätt HTTPS Finder">
-<!ENTITY httpsfinder.menu.rateKey "B">
-<!ENTITY httpsfinder.menu.help "Hjälp">
-<!ENTITY httpsfinder.menu.helpKey "H">
-<!ENTITY httpsfinder.translation.german "- Tyska (Michael Wolf &amp; Daniel Helmert)">
-<!ENTITY httpsfinder.translation.dutch "- Nederländska (Donné Brok)">
-<!ENTITY httpsfinder.translation.polish "- Polska (PcP)">
-<!ENTITY httpsfinder.translation.swedish "- Svenska (Mikael Hiort af Ornäs)">
-<!ENTITY httpsfinder.translation.spanish "- Spanska (strel)">
-<!ENTITY httpsfinder.translation.portuguese "- Portugisiska (Megahertz)">
-<!ENTITY httpsfinder.translation.finnish "- Finska (Jorma Karvonen)">
-<!ENTITY httpsfinder.translation.chinese "- Kinesiska (förenklad) (Christopher Meng)">
-<!ENTITY httpsfinder.translation.taiwan "- Kinesiska (traditionell) (swda289346)">
-<!ENTITY httpsfinder.translation.italian "- Italienska (Walter Purcaro)">
+<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.buildDate "den 9 februari 2012">
+<!ENTITY httpsinquirer.title "HTTPS Inquirer">
+<!ENTITY httpsinquirer.buildDateTitle "Versionsdatum:">
+<!ENTITY httpsinquirer.authorTitle "Skapat av:">
+<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
+<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.preference.title "Inställningar för HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.titleKey "H">
+<!ENTITY httpsinquirer.preference.translations "Översättningar har gjorts av följande personer:">
+<!ENTITY httpsinquirer.preference.supportTitle "E-postadress till support:">
+<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.enable "Aktivera HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.noRulePrompt "Visa ingen uppmaning att spara HTTPS-regel (för användning utan HTTPS Always)">
+<!ENTITY httpsinquirer.preference.autoForward "Tvinga HTTPS automatiskt, om tillgängligt">
+<!ENTITY httpsinquirer.preference.whitelistLabel "Betrodda domäner (identifiera inte HTTPS på dessa domäner)">
+<!ENTITY httpsinquirer.preference.whitelistAddButton "Lägg till">
+<!ENTITY httpsinquirer.preference.whitelistModify "Ändra">
+<!ENTITY httpsinquirer.preference.whitelistRemove "Ta bort">
+<!ENTITY httpsinquirer.preference.savedRulesTip "Sparade regler kan inaktiveras i HTTPS Alwayss inställningar.">
+<!ENTITY httpsinquirer.preference.ruleTip "För betrodda domäner: Notera att www.domän.se är en underdomän av domän.se.">
+<!ENTITY httpsinquirer.preference.learnMoreTip "Läs mer om HTTPS Inquirer">
+<!ENTITY httpsinquirer.preference.learnLinkName "här">
+<!ENTITY httpsinquirer.preference.whitelistAddTextbox "Värdnamn (domän.tld, udomän.domän.tld, *.domän.tld)">
+<!ENTITY httpsinquirer.preference.whitelistUrlColumn "Värdnamn">
+<!ENTITY httpsinquirer.preference.headFirst "Använd HEAD-identifiering först (använd GET istället om servern inte stödjer HEAD)">
+<!ENTITY httpsinquirer.preference.generalTab "Allmänt">
+<!ENTITY httpsinquirer.preference.advancedTab "Avancerat">
+<!ENTITY httpsinquirer.preference.aboutTab "Om">
+<!ENTITY httpsinquirer.preference.detectionLabel "Identifieringsmetod">
+<!ENTITY httpsinquirer.preference.showpreview "Visa förhandsgranskning (medger redigering) innan regler sparas">
+<!ENTITY httpsinquirer.preference.detectionDescLONG "HEAD-begäranden använder mindre bandbredd än GET, men vissa servrar stödjer dem inte. Om det händer försöker HTTPS Inquirer istället använda en GET-begäran.">
+<!ENTITY httpsinquirer.preference.detectionDescRec "Rekommenderad inställning: Om du har en snabb anslutning, avmarkera för att endast använda GET.  För långsammare anslutningar kan HEAD vara märkbart snabbare på de flesta webbplatser.">
+<!ENTITY httpsinquirer.preference.debug "Aktivera felsökningsloggning (utförlig)">
+<!ENTITY httpsinquirer.preference.createRule "Skapa regel">
+<!ENTITY httpsinquirer.preference.sslReport "Generera SSL-rapport">
+<!ENTITY httpsinquirer.preference.clearResults "Rensa alla resultat">
+<!ENTITY httpsinquirer.preference.listHeaderHTTPS "HTTPS-resultat">
+<!ENTITY httpsinquirer.preference.listHeaderTitle "Identifikationsresultat för sessionen">
+<!ENTITY httpsinquirer.preference.autoDismissTitle "Stäng meddelanden automatiskt efter (sekunder)">
+<!ENTITY httpsinquirer.preference.autoDismissToolTip "Varaktighet (sekunder)">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTooltip "Avmarkera för att endast köra tyst identifiering. Granska resultat och skapa regler under fliken Avancerat">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTitle "Aktivera meddelanden när HTTPS hittas (om &quot;Tvinga HTTPS automatiskt&quot; är inaktiverat)">
+<!ENTITY httpsinquirer.preference.secureCookies "Använd säkra kakor för giltiga HTTPS-domäner">
+<!ENTITY httpsinquirer.preference.secureWildcardCookies "Använd även säkra jokerkakor för HTTPS-domäner">
+<!ENTITY httpsinquirer.rulePreview.top "Förhandsgranskning:">
+<!ENTITY httpsinquirer.rulePreview.tip1 "Alla ändringar du gör kommer att återspeglas i den sparade regeln.">
+<!ENTITY httpsinquirer.rulePreview.tip2 "Klicka på OK för att spara regeln eller Avbryt för att gå tillbaka utan att spara">
+<!ENTITY httpsinquirer.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
+<!ENTITY httpsinquirer.rulePreview.clickhere "här">
+<!ENTITY httpsinquirer.rulePreview.learnmore "Läs mer om regelformatering">
+<!ENTITY httpsinquirer.menu.settings "Inställningar">
+<!ENTITY httpsinquirer.menu.settingsKey "I">
+<!ENTITY httpsinquirer.menu.refresh "Rensa temporär lista">
+<!ENTITY httpsinquirer.menu.refreshKey "R">
+<!ENTITY httpsinquirer.menu.homepage "Projektets webbplats">
+<!ENTITY httpsinquirer.menu.homepageKey "P">
+<!ENTITY httpsinquirer.menu.rate "Betygsätt HTTPS Inquirer">
+<!ENTITY httpsinquirer.menu.rateKey "B">
+<!ENTITY httpsinquirer.menu.help "Hjälp">
+<!ENTITY httpsinquirer.menu.helpKey "H">
+<!ENTITY httpsinquirer.translation.german "- Tyska (Michael Wolf &amp; Daniel Helmert)">
+<!ENTITY httpsinquirer.translation.dutch "- Nederländska (Donné Brok)">
+<!ENTITY httpsinquirer.translation.polish "- Polska (PcP)">
+<!ENTITY httpsinquirer.translation.swedish "- Svenska (Mikael Hiort af Ornäs)">
+<!ENTITY httpsinquirer.translation.spanish "- Spanska (strel)">
+<!ENTITY httpsinquirer.translation.portuguese "- Portugisiska (Megahertz)">
+<!ENTITY httpsinquirer.translation.finnish "- Finska (Jorma Karvonen)">
+<!ENTITY httpsinquirer.translation.chinese "- Kinesiska (förenklad) (Christopher Meng)">
+<!ENTITY httpsinquirer.translation.taiwan "- Kinesiska (traditionell) (swda289346)">
+<!ENTITY httpsinquirer.translation.italian "- Italienska (Walter Purcaro)">

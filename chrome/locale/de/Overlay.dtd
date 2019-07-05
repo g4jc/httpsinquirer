@@ -1,80 +1,80 @@
 <!--Pref window sizing for different translated string lengths-->
-<!ENTITY httpsfinder.prefSize.windowWidth "515">
-<!ENTITY httpsfinder.prefSize.windowHeight "560">
-<!ENTITY httpsfinder.prefSize.detectDescWidth "525">
-<!ENTITY httpsfinder.prefSize.detectChkDescWidth "480">
+<!ENTITY httpsinquirer.prefSize.windowWidth "515">
+<!ENTITY httpsinquirer.prefSize.windowHeight "560">
+<!ENTITY httpsinquirer.prefSize.detectDescWidth "525">
+<!ENTITY httpsinquirer.prefSize.detectChkDescWidth "480">
 <!--End prefWindow sizing-->
 
 <!--Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember. Format: 23. Mai 2011-->
 
-<!ENTITY httpsfinder.version "0.91">
-<!ENTITY httpsfinder.buildDate "9. Februar 2012">
-<!ENTITY httpsfinder.title "HTTPS Finder">
-<!ENTITY httpsfinder.buildDateTitle "Build-Datum:">
-<!ENTITY httpsfinder.authorTitle "Autor:">
-<!ENTITY httpsfinder.googleCodeURL "https://code.google.com/p/https-finder/">
-<!ENTITY httpsfinder.mySite "http://www.KevinAJacobs.com">
-<!ENTITY httpsfinder.preference.title "HTTPS Finder Einstellungen">
-<!ENTITY httpsfinder.preference.titleKey "H">
-<!ENTITY httpsfinder.preference.translations "Die Übersetzungen wurden von den folgenden Personen bereitgestellt:">
-<!ENTITY httpsfinder.preference.supportTitle "E-mail-Kontakt:">
-<!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
-<!ENTITY httpsfinder.preference.enable "HTTPS Finder aktivieren">
-<!ENTITY httpsfinder.preference.noRulePrompt "Nicht auffordern, HTTPS-Regel zu speichern (Regel wird nicht automatisch gespeichert)">
-<!ENTITY httpsfinder.preference.autoForward "Automatisch an HTTPS weiterleiten, wenn verfügbar (Stiller Modus)">
-<!ENTITY httpsfinder.preference.whitelistLabel "Domänen-Positivliste (HTTPS auf diesen Domänen nicht entdecken)">
-<!ENTITY httpsfinder.preference.whitelistAddButton "Zur Positivliste hinzufügen">
-<!ENTITY httpsfinder.preference.whitelistModify "Ändern">
-<!ENTITY httpsfinder.preference.whitelistRemove "Entfernen">
-<!ENTITY httpsfinder.preference.savedRulesTip "Gespeicherte Regeln können in den Einstellungen von HTTPS Always deaktivert werden.">
-<!ENTITY httpsfinder.preference.ruleTip "Beachten Sie bei Regeln der Positivliste, dass www.domain.com eine Subdomäne von domain.com ist.">
-<!ENTITY httpsfinder.preference.learnMoreTip "Mehr über HTTPS Finder erfahren Sie">
-<!ENTITY httpsfinder.preference.learnLinkName "hier">
-<!ENTITY httpsfinder.preference.whitelistAddTextbox "Hostname (domain.tld, sub.domain.tld, *.domain.tld)">
-<!ENTITY httpsfinder.preference.whitelistUrlColumn "Hostname">
-<!ENTITY httpsfinder.preference.headFirst "Zuerst HEAD-Erkennung verwenden (Fallback auf GET, wenn diese vom Server nicht unterstützt wird)">
-<!ENTITY httpsfinder.preference.generalTab "Allgemein">
-<!ENTITY httpsfinder.preference.advancedTab "Erweitert">
-<!ENTITY httpsfinder.preference.aboutTab "Über">
-<!ENTITY httpsfinder.preference.detectionLabel "Erkennungsmethode">
-<!ENTITY httpsfinder.preference.showpreview "Vor dem Speichern der Regeln Regelvorschau zeigen (erlaubt Bearbeitung)">
-<!ENTITY httpsfinder.preference.detectionDescLONG "HEAD erfordert die Verwendung einer geringeren Bandbreite als GET, aber manche Server unterstützen das möglicherweise nicht. Falls das geschieht, wird HTTPS Finder eine GET-Abfrage versuchen.">
-<!ENTITY httpsfinder.preference.detectionDescRec "Empfohlene Einstellung: Wenn Sie eine schnelle Verbindung haben, deaktivieren Sie, um nur GET zu verwenden. Bei langsameren Verbindungen ist HEAD möglicherweise bei den meisten Sites merklich schneller.">
-<!ENTITY httpsfinder.preference.debug "Fehlersuche ausführlich protokollieren">
-<!ENTITY httpsfinder.preference.secureCookies "Cookies für gültige HTTPS-Domains sichern">
-<!ENTITY httpsfinder.preference.secureWildcardCookies "Auch Platzhalter-Cookies für HTTPS-Domains sichern">
-<!ENTITY httpsfinder.rulePreview.top "Regelvorschau:">
-<!ENTITY httpsfinder.rulePreview.tip1 "Alle von Ihnen vorgenommenen Änderungen spiegeln sich in der gespeicherten Regel wider.">
-<!ENTITY httpsfinder.rulePreview.tip2 "Klicken Sie OK, um die Regel zu speichern oder Abbrechen, um ohne Speicherung zurückzukehren">
-<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
-<!ENTITY httpsfinder.rulePreview.clickhere "hier">
-<!ENTITY httpsfinder.rulePreview.learnmore "Mehr über Regelformatierung">
-<!ENTITY httpsfinder.menu.settings "Einstellungen">
-<!ENTITY httpsfinder.menu.settingsKey "E">
-<!ENTITY httpsfinder.menu.refresh "Temporäre Positivliste leeren">
-<!ENTITY httpsfinder.menu.refreshKey "T">
-<!ENTITY httpsfinder.menu.homepage "Projekt-Website">
-<!ENTITY httpsfinder.menu.homepageKey "P">
-<!ENTITY httpsfinder.menu.rate "HTTPS Finder bewerten">
-<!ENTITY httpsfinder.menu.rateKey "b">
-<!ENTITY httpsfinder.menu.help "Hilfe">
-<!ENTITY httpsfinder.menu.helpKey "H">
-<!ENTITY httpsfinder.preference.createRule "Regel erstellen">
-<!ENTITY httpsfinder.preference.sslReport "SSL-Bericht erzeugen">
-<!ENTITY httpsfinder.preference.clearResults "Alle Ergebnisse löschen">
-<!ENTITY httpsfinder.preference.listHeaderHTTPS "HTTPS-Ergebnis">
-<!ENTITY httpsfinder.preference.listHeaderTitle "Erkennungsergebnisse der Sitzung">
-<!ENTITY httpsfinder.preference.autoDismissTitle "Warnungen verwerfen nach (Sekunden)">
-<!ENTITY httpsfinder.preference.autoDismissToolTip "Dauer (Sekunden)">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTooltip "Nur für stillschweigende Erkennung. Anzeige der Ergebnisse und Erstellung der Regeln aus dem Tab Erweitert">
-<!ENTITY httpsfinder.preference.noHTTPSAlertTitle "Gefundene HTTPS-Warnungen aktivieren (falls die automatische HTTPS-Erzwingung deaktiviert ist)">
-<!ENTITY httpsfinder.translation.german "- Deutsch (Michael Wolf &amp; Daniel Helmert)">
-<!ENTITY httpsfinder.translation.dutch "- Niederländisch (Donné Brok)">
-<!ENTITY httpsfinder.translation.polish "- Polnisch (PcP)">
-<!ENTITY httpsfinder.translation.swedish "- Schwedisch (Mikael Hiort)">
-<!ENTITY httpsfinder.translation.spanish "- Spanisch (strel)">
-<!ENTITY httpsfinder.translation.portuguese "- Portugiesisch (Megahertz)">
-<!ENTITY httpsfinder.translation.finnish "- Finnisch (Jorma Karvonen)">
-<!ENTITY httpsfinder.translation.chinese "- Chinesisch (Christopher Meng)">
-<!ENTITY httpsfinder.translation.taiwan "- Chinesisch (Taiwan) (swda289346)">
-<!ENTITY httpsfinder.translation.italian "- Italienisch (Walter Purcaro)">
+<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.buildDate "9. Februar 2012">
+<!ENTITY httpsinquirer.title "HTTPS Inquirer">
+<!ENTITY httpsinquirer.buildDateTitle "Build-Datum:">
+<!ENTITY httpsinquirer.authorTitle "Autor:">
+<!ENTITY httpsinquirer.googleCodeURL "https://code.google.com/p/https-finder/">
+<!ENTITY httpsinquirer.mySite "http://www.KevinAJacobs.com">
+<!ENTITY httpsinquirer.preference.title "HTTPS Inquirer Einstellungen">
+<!ENTITY httpsinquirer.preference.titleKey "H">
+<!ENTITY httpsinquirer.preference.translations "Die Übersetzungen wurden von den folgenden Personen bereitgestellt:">
+<!ENTITY httpsinquirer.preference.supportTitle "E-mail-Kontakt:">
+<!ENTITY httpsinquirer.preference.supportEmail "httpsinquirer@gmail.com">
+<!ENTITY httpsinquirer.preference.enable "HTTPS Inquirer aktivieren">
+<!ENTITY httpsinquirer.preference.noRulePrompt "Nicht auffordern, HTTPS-Regel zu speichern (Regel wird nicht automatisch gespeichert)">
+<!ENTITY httpsinquirer.preference.autoForward "Automatisch an HTTPS weiterleiten, wenn verfügbar (Stiller Modus)">
+<!ENTITY httpsinquirer.preference.whitelistLabel "Domänen-Positivliste (HTTPS auf diesen Domänen nicht entdecken)">
+<!ENTITY httpsinquirer.preference.whitelistAddButton "Zur Positivliste hinzufügen">
+<!ENTITY httpsinquirer.preference.whitelistModify "Ändern">
+<!ENTITY httpsinquirer.preference.whitelistRemove "Entfernen">
+<!ENTITY httpsinquirer.preference.savedRulesTip "Gespeicherte Regeln können in den Einstellungen von HTTPS Always deaktivert werden.">
+<!ENTITY httpsinquirer.preference.ruleTip "Beachten Sie bei Regeln der Positivliste, dass www.domain.com eine Subdomäne von domain.com ist.">
+<!ENTITY httpsinquirer.preference.learnMoreTip "Mehr über HTTPS Inquirer erfahren Sie">
+<!ENTITY httpsinquirer.preference.learnLinkName "hier">
+<!ENTITY httpsinquirer.preference.whitelistAddTextbox "Hostname (domain.tld, sub.domain.tld, *.domain.tld)">
+<!ENTITY httpsinquirer.preference.whitelistUrlColumn "Hostname">
+<!ENTITY httpsinquirer.preference.headFirst "Zuerst HEAD-Erkennung verwenden (Fallback auf GET, wenn diese vom Server nicht unterstützt wird)">
+<!ENTITY httpsinquirer.preference.generalTab "Allgemein">
+<!ENTITY httpsinquirer.preference.advancedTab "Erweitert">
+<!ENTITY httpsinquirer.preference.aboutTab "Über">
+<!ENTITY httpsinquirer.preference.detectionLabel "Erkennungsmethode">
+<!ENTITY httpsinquirer.preference.showpreview "Vor dem Speichern der Regeln Regelvorschau zeigen (erlaubt Bearbeitung)">
+<!ENTITY httpsinquirer.preference.detectionDescLONG "HEAD erfordert die Verwendung einer geringeren Bandbreite als GET, aber manche Server unterstützen das möglicherweise nicht. Falls das geschieht, wird HTTPS Inquirer eine GET-Abfrage versuchen.">
+<!ENTITY httpsinquirer.preference.detectionDescRec "Empfohlene Einstellung: Wenn Sie eine schnelle Verbindung haben, deaktivieren Sie, um nur GET zu verwenden. Bei langsameren Verbindungen ist HEAD möglicherweise bei den meisten Sites merklich schneller.">
+<!ENTITY httpsinquirer.preference.debug "Fehlersuche ausführlich protokollieren">
+<!ENTITY httpsinquirer.preference.secureCookies "Cookies für gültige HTTPS-Domains sichern">
+<!ENTITY httpsinquirer.preference.secureWildcardCookies "Auch Platzhalter-Cookies für HTTPS-Domains sichern">
+<!ENTITY httpsinquirer.rulePreview.top "Regelvorschau:">
+<!ENTITY httpsinquirer.rulePreview.tip1 "Alle von Ihnen vorgenommenen Änderungen spiegeln sich in der gespeicherten Regel wider.">
+<!ENTITY httpsinquirer.rulePreview.tip2 "Klicken Sie OK, um die Regel zu speichern oder Abbrechen, um ohne Speicherung zurückzukehren">
+<!ENTITY httpsinquirer.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
+<!ENTITY httpsinquirer.rulePreview.clickhere "hier">
+<!ENTITY httpsinquirer.rulePreview.learnmore "Mehr über Regelformatierung">
+<!ENTITY httpsinquirer.menu.settings "Einstellungen">
+<!ENTITY httpsinquirer.menu.settingsKey "E">
+<!ENTITY httpsinquirer.menu.refresh "Temporäre Positivliste leeren">
+<!ENTITY httpsinquirer.menu.refreshKey "T">
+<!ENTITY httpsinquirer.menu.homepage "Projekt-Website">
+<!ENTITY httpsinquirer.menu.homepageKey "P">
+<!ENTITY httpsinquirer.menu.rate "HTTPS Inquirer bewerten">
+<!ENTITY httpsinquirer.menu.rateKey "b">
+<!ENTITY httpsinquirer.menu.help "Hilfe">
+<!ENTITY httpsinquirer.menu.helpKey "H">
+<!ENTITY httpsinquirer.preference.createRule "Regel erstellen">
+<!ENTITY httpsinquirer.preference.sslReport "SSL-Bericht erzeugen">
+<!ENTITY httpsinquirer.preference.clearResults "Alle Ergebnisse löschen">
+<!ENTITY httpsinquirer.preference.listHeaderHTTPS "HTTPS-Ergebnis">
+<!ENTITY httpsinquirer.preference.listHeaderTitle "Erkennungsergebnisse der Sitzung">
+<!ENTITY httpsinquirer.preference.autoDismissTitle "Warnungen verwerfen nach (Sekunden)">
+<!ENTITY httpsinquirer.preference.autoDismissToolTip "Dauer (Sekunden)">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTooltip "Nur für stillschweigende Erkennung. Anzeige der Ergebnisse und Erstellung der Regeln aus dem Tab Erweitert">
+<!ENTITY httpsinquirer.preference.noHTTPSAlertTitle "Gefundene HTTPS-Warnungen aktivieren (falls die automatische HTTPS-Erzwingung deaktiviert ist)">
+<!ENTITY httpsinquirer.translation.german "- Deutsch (Michael Wolf &amp; Daniel Helmert)">
+<!ENTITY httpsinquirer.translation.dutch "- Niederländisch (Donné Brok)">
+<!ENTITY httpsinquirer.translation.polish "- Polnisch (PcP)">
+<!ENTITY httpsinquirer.translation.swedish "- Schwedisch (Mikael Hiort)">
+<!ENTITY httpsinquirer.translation.spanish "- Spanisch (strel)">
+<!ENTITY httpsinquirer.translation.portuguese "- Portugiesisch (Megahertz)">
+<!ENTITY httpsinquirer.translation.finnish "- Finnisch (Jorma Karvonen)">
+<!ENTITY httpsinquirer.translation.chinese "- Chinesisch (Christopher Meng)">
+<!ENTITY httpsinquirer.translation.taiwan "- Chinesisch (Taiwan) (swda289346)">
+<!ENTITY httpsinquirer.translation.italian "- Italienisch (Walter Purcaro)">

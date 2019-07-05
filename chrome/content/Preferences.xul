@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://httpsfinder/content/about.css" type="text/css"?>
-<!DOCTYPE overlay SYSTEM "chrome://httpsfinder/locale/Overlay.dtd">
+<?xml-stylesheet href="chrome://httpsinquirer/content/about.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://httpsinquirer/locale/Overlay.dtd">
 <prefwindow
     id="prefWindow"
-    title="&httpsfinder.preference.title;"
+    title="&httpsinquirer.preference.title;"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
     xmlns:html="http://www.w3.org/1999/xhtml"
     buttons="accept,cancel">
-    <script type="application/x-javascript" src="chrome://httpsfinder/content/Preferences.js"/>
+    <script type="application/x-javascript" src="chrome://httpsinquirer/content/Preferences.js"/>
 
     <stringbundleset id="stringbundleset">
-        <stringbundle id="httpsfinderStrings"
-        src="chrome://httpsfinder/locale/Overlay.properties" />
+        <stringbundle id="httpsinquirerStrings"
+        src="chrome://httpsinquirer/locale/Overlay.properties" />
     </stringbundleset>
 
-    <prefpane label="&httpsfinder.preference.title;"
-        onpaneload="httpsfinder.Preferences.loadWindowObjects()">
+    <prefpane label="&httpsinquirer.preference.title;"
+        onpaneload="httpsinquirer.Preferences.loadWindowObjects()">
 
         <preferences>
-            <preference id="httpsfinder-enable" name="extensions.httpsfinder.enable" type="bool"/>
-            <preference id="httpsfinder-noruleprompt" name="extensions.httpsfinder.noruleprompt" type="bool"/>
-            <preference id="httpsfinder-autoforward" name="extensions.httpsfinder.autoforward" type="bool"/>
-            <preference id="httpsfinder-headfirst" name="extensions.httpsfinder.headfirst" type="bool"/>
-            <preference id="httpsfinder-showrulepreview" name="extensions.httpsfinder.showrulepreview" type="bool"/>
-            <preference id="httpsfinder-autoDismiss" name="extensions.httpsfinder.dismissAlerts" type="bool"/>
-            <preference id="httpsfinder-dismissTime" name="extensions.httpsfinder.alertDismissTime" type="int"/>
-            <preference id="httpsfinder-HTTPSFoundAlerts" name="extensions.httpsfinder.httpsfoundalert" type="bool"/>
-            <preference id="httpsfinder-secureCookies" name="extensions.httpsfinder.attemptSecureCookies" type="bool"/>
-            <preference id="httpsfinder-secureWildcardCookies" name="extensions.httpsfinder.secureWildcardCookies" type="bool"/>
-            <preference id="httpsfinder-useNoscript" name="extensions.httpsfinder.useNoscript" type="bool"/>
+            <preference id="httpsinquirer-enable" name="extensions.httpsinquirer.enable" type="bool"/>
+            <preference id="httpsinquirer-noruleprompt" name="extensions.httpsinquirer.noruleprompt" type="bool"/>
+            <preference id="httpsinquirer-autoforward" name="extensions.httpsinquirer.autoforward" type="bool"/>
+            <preference id="httpsinquirer-headfirst" name="extensions.httpsinquirer.headfirst" type="bool"/>
+            <preference id="httpsinquirer-showrulepreview" name="extensions.httpsinquirer.showrulepreview" type="bool"/>
+            <preference id="httpsinquirer-autoDismiss" name="extensions.httpsinquirer.dismissAlerts" type="bool"/>
+            <preference id="httpsinquirer-dismissTime" name="extensions.httpsinquirer.alertDismissTime" type="int"/>
+            <preference id="httpsinquirer-HTTPSFoundAlerts" name="extensions.httpsinquirer.httpsfoundalert" type="bool"/>
+            <preference id="httpsinquirer-secureCookies" name="extensions.httpsinquirer.attemptSecureCookies" type="bool"/>
+            <preference id="httpsinquirer-secureWildcardCookies" name="extensions.httpsinquirer.secureWildcardCookies" type="bool"/>
+            <preference id="httpsinquirer-useNoscript" name="extensions.httpsinquirer.useNoscript" type="bool"/>
         </preferences>
 
-        <tabbox id="httpsfindertabs" selectedIndex="0">
+        <tabbox id="httpsinquirertabs" selectedIndex="0">
             <tabs>
-                <tab label="&httpsfinder.preference.generalTab;"/>
-                <tab label="&httpsfinder.preference.advancedTab;"/>
-                <tab label="&httpsfinder.preference.aboutTab;"/>
+                <tab label="&httpsinquirer.preference.generalTab;"/>
+                <tab label="&httpsinquirer.preference.advancedTab;"/>
+                <tab label="&httpsinquirer.preference.aboutTab;"/>
             </tabs>
             <tabpanels>
                  <!--_______________________________ Main panel ______________________________________  -->
@@ -45,62 +45,62 @@
                         <grid>
                             <rows>
                                 <row>
-                                    <checkbox id="enable" preference="httpsfinder-enable" onclick="httpsfinder.Preferences.EnableChecked(document)"/>
-                                    <label  control="enable" value="&httpsfinder.preference.enable;" />
+                                    <checkbox id="enable" preference="httpsinquirer-enable" onclick="httpsinquirer.Preferences.EnableChecked(document)"/>
+                                    <label  control="enable" value="&httpsinquirer.preference.enable;" />
                                 </row>
                                 <row>
-                                    <checkbox id="noruleprompt" preference="httpsfinder-noruleprompt"/>
-                                    <label id="promptLabel" control="noruleprompt" value="&httpsfinder.preference.noRulePrompt;"/>
+                                    <checkbox id="noruleprompt" preference="httpsinquirer-noruleprompt"/>
+                                    <label id="promptLabel" control="noruleprompt" value="&httpsinquirer.preference.noRulePrompt;"/>
                                 </row>
                                 <tooltip id="silentModeTip" orient="vertical" style="background-color: #33DD00;">
-                                    <label value="&httpsfinder.preference.noHTTPSAlertTooltip;"/>
+                                    <label value="&httpsinquirer.preference.noHTTPSAlertTooltip;"/>
                                 </tooltip>
                                 <row>
-                                    <checkbox id="httpsfoundprompt" preference="httpsfinder-HTTPSFoundAlerts" onclick="" tooltip="silentModeTip"/>
+                                    <checkbox id="httpsfoundprompt" preference="httpsinquirer-HTTPSFoundAlerts" onclick="" tooltip="silentModeTip"/>
                                     <label tooltip="silentModeTip" id="httpsfoundpromptLbl" control="httpsfoundprompt"
-                                        value="&httpsfinder.preference.noHTTPSAlertTitle;" />
+                                        value="&httpsinquirer.preference.noHTTPSAlertTitle;" />
                                 </row>
                                 <row>
-                                    <checkbox id="autoforward" preference="httpsfinder-autoforward" onclick="httpsfinder.Preferences.autoForwardToggle(document)"/>
-                                    <label id="autoforwardLabel" control="autoforward" value="&httpsfinder.preference.autoForward;"/>
+                                    <checkbox id="autoforward" preference="httpsinquirer-autoforward" onclick="httpsinquirer.Preferences.autoForwardToggle(document)"/>
+                                    <label id="autoforwardLabel" control="autoforward" value="&httpsinquirer.preference.autoForward;"/>
                                 </row>
                                 <separator class="thin"/>
                             </rows>
                         </grid>
                         <groupbox minwidth="465">
-                            <caption label="&httpsfinder.preference.whitelistLabel;"/>
+                            <caption label="&httpsinquirer.preference.whitelistLabel;"/>
                             <row>
-                                <textbox id="whitelistURL" emptytext="&httpsfinder.preference.whitelistAddTextbox;" size="49" />
-                                <button id="whitelistURLLabel" label="&httpsfinder.preference.whitelistAddButton;" oncommand="httpsfinder.Preferences.AddToWhitelist(document)"/>
+                                <textbox id="whitelistURL" emptytext="&httpsinquirer.preference.whitelistAddTextbox;" size="49" />
+                                <button id="whitelistURLLabel" label="&httpsinquirer.preference.whitelistAddButton;" oncommand="httpsinquirer.Preferences.AddToWhitelist(document)"/>
                             </row>
                             <row>
-                                <listbox seltype="multiple" flex="2"  id="whitelist" onselect="httpsfinder.Preferences.WhitelistSelect(document)">
+                                <listbox seltype="multiple" flex="2"  id="whitelist" onselect="httpsinquirer.Preferences.WhitelistSelect(document)">
                                     <listhead>
-                                        <listheader label="&httpsfinder.preference.whitelistUrlColumn;" width="240"/>
+                                        <listheader label="&httpsinquirer.preference.whitelistUrlColumn;" width="240"/>
                                     </listhead>
                                 </listbox>
                             </row>
                             <row>
-                                <button id="modifyRule" label="&httpsfinder.preference.whitelistModify;" oncommand="httpsfinder.Preferences.ModifyWhitelistRule(document)" disabled="true"/>
-                                <button id="removeRule" label="&httpsfinder.preference.whitelistRemove;" oncommand="httpsfinder.Preferences.RemoveWhitelistRule(document)" disabled="true"/>
+                                <button id="modifyRule" label="&httpsinquirer.preference.whitelistModify;" oncommand="httpsinquirer.Preferences.ModifyWhitelistRule(document)" disabled="true"/>
+                                <button id="removeRule" label="&httpsinquirer.preference.whitelistRemove;" oncommand="httpsinquirer.Preferences.RemoveWhitelistRule(document)" disabled="true"/>
                             </row>
                         </groupbox>
                         <separator class="thin"/>
                         <vbox>
-                            <label value="&httpsfinder.preference.ruleTip;" control="ruleTip"/>
+                            <label value="&httpsinquirer.preference.ruleTip;" control="ruleTip"/>
                         </vbox>
                         <vbox>
-                            <label value="&httpsfinder.preference.savedRulesTip;" control="savedRulesTip"/>
+                            <label value="&httpsinquirer.preference.savedRulesTip;" control="savedRulesTip"/>
                         </vbox>
                         <vbox>
                             <row>
-                                <label value="&httpsfinder.preference.learnMoreTip;" control="learnMoreTip"/>
+                                <label value="&httpsinquirer.preference.learnMoreTip;" control="learnMoreTip"/>
                                 <label id="projectlink"
-                                         value="&httpsfinder.preference.learnLinkName;"
+                                         value="&httpsinquirer.preference.learnLinkName;"
                                          style="color: blue; text-decoration:underline;"
                                          onmouseover="event.target.style.cursor='pointer'"
                                          onmouseout="event.target.style.cursor='default'"
-                                        onclick="httpsfinder.Preferences.openWebsiteInTab('https://code.google.com/p/https-finder/');"/>
+                                        onclick="httpsinquirer.Preferences.openWebsiteInTab('https://code.google.com/p/https-finder/');"/>
                             </row>
                         </vbox>
                     </column>
@@ -112,23 +112,23 @@
                         <grid>
                             <rows>
                                 <row>
-                                    <checkbox id="headfirst" preference="httpsfinder-headfirst"/>
-                                    <label control="headfirst" value="&httpsfinder.preference.headFirst;"/>                
+                                    <checkbox id="headfirst" preference="httpsinquirer-headfirst"/>
+                                    <label control="headfirst" value="&httpsinquirer.preference.headFirst;"/>                
                                 </row>
                                 <row>
-                                    <checkbox id="securecookies" preference="httpsfinder-secureCookies" onclick="httpsfinder.Preferences.secureCookieCheck()"/>
-                                    <label id="securecookies" control="securecookies" value="&httpsfinder.preference.secureCookies;"/>                                 
+                                    <checkbox id="securecookies" preference="httpsinquirer-secureCookies" onclick="httpsinquirer.Preferences.secureCookieCheck()"/>
+                                    <label id="securecookies" control="securecookies" value="&httpsinquirer.preference.secureCookies;"/>                                 
                                 </row>
                                 <row>
-                                    <checkbox disabled="true" id="securewildcardcookies" preference="httpsfinder-secureWildcardCookies"/>
-                                    <label disabled="true" id="securewildcardcookiesLabel" control="securewildcardcookiesLabel" value="&httpsfinder.preference.secureWildcardCookies;"/>
+                                    <checkbox disabled="true" id="securewildcardcookies" preference="httpsinquirer-secureWildcardCookies"/>
+                                    <label disabled="true" id="securewildcardcookiesLabel" control="securewildcardcookiesLabel" value="&httpsinquirer.preference.secureWildcardCookies;"/>
                                  </row>
                                 <vbox>
                                     <row>
-                                        <checkbox id="autoDismiss" preference="httpsfinder-autoDismiss"/>
-                                        <label control="ADText" value="&httpsfinder.preference.autoDismissTitle;"/>     
-                                        <textbox id="dismissTime" type="number" min="0" max="60" preference="httpsfinder-dismissTime"
-                                                   size="2" maxlength="2" tooltiptext="&httpsfinder.preference.autoDismissToolTip;" style="width: 50px;"/>
+                                        <checkbox id="autoDismiss" preference="httpsinquirer-autoDismiss"/>
+                                        <label control="ADText" value="&httpsinquirer.preference.autoDismissTitle;"/>     
+                                        <textbox id="dismissTime" type="number" min="0" max="60" preference="httpsinquirer-dismissTime"
+                                                   size="2" maxlength="2" tooltiptext="&httpsinquirer.preference.autoDismissToolTip;" style="width: 50px;"/>
                                     </row>
                                 </vbox>
                             </rows>
@@ -136,31 +136,31 @@
                         <separator class="thin"/>
                         <hbox>
                             <groupbox flex="1" minwidth="465">
-                                <caption label="&httpsfinder.preference.listHeaderTitle;"/>
+                                <caption label="&httpsinquirer.preference.listHeaderTitle;"/>
                                 <row>
                                     <listbox seltype="single" flex="2" id="cacheList"
-                                             onselect="httpsfinder.Preferences.ResultSelect(document)">
+                                             onselect="httpsinquirer.Preferences.ResultSelect(document)">
                                         <listhead>
-                                            <listheader label="&httpsfinder.preference.whitelistUrlColumn;" width="210"/>
-                                            <listheader label="&httpsfinder.preference.listHeaderHTTPS;"  style="padding: 4"/>
+                                            <listheader label="&httpsinquirer.preference.whitelistUrlColumn;" width="210"/>
+                                            <listheader label="&httpsinquirer.preference.listHeaderHTTPS;"  style="padding: 4"/>
                                             <listheader label="Cookies Secured"  style="padding: 4"/>
                                         </listhead>
                                     </listbox>
                                 </row>
                                 <row>
-                                    <button id="writeRule" label="&httpsfinder.preference.createRule;" oncommand="httpsfinder.Preferences.writeRule();" disabled="true"/>
-                                    <button id="removeFromCache" label="&httpsfinder.preference.whitelistRemove;" oncommand="httpsfinder.Preferences.removeCacheItem()" disabled="true"/>
-                                    <button id="restoreCookies" label="Restore insecure cookies" oncommand="httpsfinder.Preferences.resetCookies();" disabled="true"/>
+                                    <button id="writeRule" label="&httpsinquirer.preference.createRule;" oncommand="httpsinquirer.Preferences.writeRule();" disabled="true"/>
+                                    <button id="removeFromCache" label="&httpsinquirer.preference.whitelistRemove;" oncommand="httpsinquirer.Preferences.removeCacheItem()" disabled="true"/>
+                                    <button id="restoreCookies" label="Restore insecure cookies" oncommand="httpsinquirer.Preferences.resetCookies();" disabled="true"/>
                                 </row>
                                 <row>
-                                    <button id="viewReport" label="&httpsfinder.preference.sslReport;" oncommand="httpsfinder.Preferences.sslReport();" disabled="true"/>
-                                    <button id="resetCache" label="&httpsfinder.preference.clearResults;" oncommand="httpsfinder.Preferences.resetWhitelist();"/>
+                                    <button id="viewReport" label="&httpsinquirer.preference.sslReport;" oncommand="httpsinquirer.Preferences.sslReport();" disabled="true"/>
+                                    <button id="resetCache" label="&httpsinquirer.preference.clearResults;" oncommand="httpsinquirer.Preferences.resetWhitelist();"/>
                                 </row>
                             </groupbox>
                         </hbox>
                         <!--<row>
-                                    <checkbox id="noscript" preference="httpsfinder-useNoscript"/>
-                                    <label id="noscript" control="noscript" value="Save rules for NoScript (instead of HTTPS Everywhere)"/>                                 
+                                    <checkbox id="noscript" preference="httpsinquirer-useNoscript"/>
+                                    <label id="noscript" control="noscript" value="Save rules for NoScript (instead of HTTPS Always)"/>
                         </row>-->
                     </column>
                 </tabpanel>
@@ -168,54 +168,54 @@
                 <!--_______________________________ About panel ______________________________________  -->
                 <tabpanel>
                     <column>
-                        <vbox id="httpsfinderPrefsAbout">
-                            <hbox id="httpsfinder-about-details">
-                                <description class="name">&httpsfinder.title;</description>
-                                <description class="name">&httpsfinder.version;</description>
-                                <image id="logo" src='chrome://httpsfinder/skin/iconLarge.png'/>
+                        <vbox id="httpsinquirerPrefsAbout">
+                            <hbox id="httpsinquirer-about-details">
+                                <description class="name">&httpsinquirer.title;</description>
+                                <description class="name">&httpsinquirer.version;</description>
+                                <image id="logo" src='chrome://httpsinquirer/skin/iconLarge.png'/>
                             </hbox>
-                            <!--<description value="&httpsfinder.buildDateTitle;" class="title"/>
-                            <description>&httpsfinder.buildDate;</description>-->
-                            <description value="&httpsfinder.authorTitle;" class="title"/>
+                            <!--<description value="&httpsinquirer.buildDateTitle;" class="title"/>
+                            <description>&httpsinquirer.buildDate;</description>-->
+                            <description value="&httpsinquirer.authorTitle;" class="title"/>
                             <description>Kevin Jacobs</description>
-                            <!--<description onclick="httpsfinder.Preferences.openWebsiteInTab('http://kevinajacobs.com/');" class="url">&httpsfinder.mySite;</description>-->
-                            <description value="&httpsfinder.preference.supportTitle;" class="title"/>
-                            <description onclick="location.href='mailto:&httpsfinder.preference.supportEmail;'" class="url">&httpsfinder.preference.supportEmail;</description>
+                            <!--<description onclick="httpsinquirer.Preferences.openWebsiteInTab('http://kevinajacobs.com/');" class="url">&httpsinquirer.mySite;</description>-->
+                            <description value="&httpsinquirer.preference.supportTitle;" class="title"/>
+                            <description onclick="location.href='mailto:&httpsinquirer.preference.supportEmail;'" class="url">&httpsinquirer.preference.supportEmail;</description>
                         </vbox>
                         <separator class="thin"/>
                         <separator class="thin"/>
                         <separator class="thin"/>
-                        <separator class="groove"  width = "&httpsfinder.prefSize.detectDescWidth;"/>
+                        <separator class="groove"  width = "&httpsinquirer.prefSize.detectDescWidth;"/>
                         <separator class="thin"/>
                         <row>
-                            <groupbox width = "&httpsfinder.prefSize.detectDescWidth;">
-                                <caption label="&httpsfinder.preference.translations;"/>
+                            <groupbox width = "&httpsinquirer.prefSize.detectDescWidth;">
+                                <caption label="&httpsinquirer.preference.translations;"/>
                                 <row>
-                                    <label value="&httpsfinder.translation.german;"/>
+                                    <label value="&httpsinquirer.translation.german;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.dutch;"/>
+                                    <label value="&httpsinquirer.translation.dutch;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.polish;"/>
+                                    <label value="&httpsinquirer.translation.polish;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.swedish;"/>
+                                    <label value="&httpsinquirer.translation.swedish;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.spanish;"/>
+                                    <label value="&httpsinquirer.translation.spanish;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.portuguese;"/>
+                                    <label value="&httpsinquirer.translation.portuguese;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.finnish;"/>
+                                    <label value="&httpsinquirer.translation.finnish;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.chinese;"/>
+                                    <label value="&httpsinquirer.translation.chinese;"/>
                                 </row>
                                 <row>
-                                    <label value="&httpsfinder.translation.taiwan;"/>
+                                    <label value="&httpsinquirer.translation.taiwan;"/>
                                 </row>
                             </groupbox>
                         </row>

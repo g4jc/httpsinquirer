@@ -20,12 +20,12 @@
  *  ***** END LICENSE BLOCK *****
  */
 
-if (!httpsfinder) var httpsfinder = {};
+if (!httpsinquirer) var httpsinquirer = {};
 
-httpsfinder.Preferences = {    
+httpsinquirer.Preferences = {
     
     loadWindowObjects: function(){                
-        Components.utils.import("resource://hfShared/hfShared.js", httpsfinder.Preferences);
+        Components.utils.import("resource://hfShared/hfShared.js", httpsinquirer.Preferences);
 
         var enable = document.getElementById('enable');
         if (enable.checked){
@@ -62,8 +62,8 @@ httpsfinder.Preferences = {
             document.getElementById('securewildcardcookiesLabel').disabled = false;
             
         }
-        httpsfinder.Preferences.LoadWhitelist();
-        httpsfinder.Preferences.loadResults();
+        httpsinquirer.Preferences.LoadWhitelist();
+        httpsinquirer.Preferences.loadResults();
     },
 
     loadResults: function(){
@@ -88,17 +88,17 @@ httpsfinder.Preferences = {
         if (privatebrowsing){
             let row = document.createElement('listitem');
             let cell = document.createElement('listcell');
-            var strings = document.getElementById("httpsfinderStrings");
-            cell.setAttribute('label', strings.getString("httpsfinder.preference.noResultsPB"));
+            var strings = document.getElementById("httpsinquirerStrings");
+            cell.setAttribute('label', strings.getString("httpsinquirer.preference.noResultsPB"));
             row.appendChild(cell);
             theList.appendChild(row);
             theList.disabled = true;
             return;
         }
 
-        for (var i = 0; i < httpsfinder.Preferences.results.goodSSL.length; i++)
+        for (var i = 0; i < httpsinquirer.Preferences.results.goodSSL.length; i++)
         {
-            var host = httpsfinder.Preferences.results.goodSSL[i];
+            var host = httpsinquirer.Preferences.results.goodSSL[i];
             
             //Add domain name to row
             var row = document.createElement('listitem');
@@ -108,7 +108,7 @@ httpsfinder.Preferences = {
 
             //Add check mark to HTTPS column
             var checkIcon = document.createElement('image');
-            checkIcon.setAttribute('src', 'chrome://httpsfinder/skin/goodSSL.png');
+            checkIcon.setAttribute('src', 'chrome://httpsinquirer/skin/goodSSL.png');
             var hbox = document.createElement('hbox');
             hbox.appendChild(checkIcon);
             hbox.setAttribute('pack', 'center');
@@ -124,13 +124,13 @@ httpsfinder.Preferences = {
        
             
 
-            if(httpsfinder.Preferences.results.cookieHostWhitelist.indexOf(host) == -1){
-                for(var j = 0; j < httpsfinder.Preferences.results.securedCookieHosts.length; j++){
-                    if(httpsfinder.Preferences.results.securedCookieHosts[j] == host ||
-                        httpsfinder.Preferences.results.securedCookieHosts[j] ==  altHost){                   
+            if(httpsinquirer.Preferences.results.cookieHostWhitelist.indexOf(host) == -1){
+                for(var j = 0; j < httpsinquirer.Preferences.results.securedCookieHosts.length; j++){
+                    if(httpsinquirer.Preferences.results.securedCookieHosts[j] == host ||
+                        httpsinquirer.Preferences.results.securedCookieHosts[j] ==  altHost){
                         //Add check mark to Cookies Secured column
                         checkIcon = document.createElement('image');
-                        checkIcon.setAttribute('src', 'chrome://httpsfinder/skin/goodSSL.png');
+                        checkIcon.setAttribute('src', 'chrome://httpsinquirer/skin/goodSSL.png');
                         hbox = document.createElement('hbox');
                         hbox.appendChild(checkIcon);
                         hbox.setAttribute('pack', 'center');
@@ -156,10 +156,10 @@ httpsfinder.Preferences = {
         
         var wildcardHost = selectedHost.substring(selectedHost.indexOf("."));
         
-        httpsfinder.Preferences.results.cookieHostWhitelist.push(selectedHost);
-        httpsfinder.Preferences.results.cookieHostWhitelist.push(wildcardHost);
+        httpsinquirer.Preferences.results.cookieHostWhitelist.push(selectedHost);
+        httpsinquirer.Preferences.results.cookieHostWhitelist.push(wildcardHost);
         
-        httpsfinder.Preferences.restoreDefaultCookiesForHost(selectedHost, wildcardHost); 
+        httpsinquirer.Preferences.restoreDefaultCookiesForHost(selectedHost, wildcardHost); 
         
         if(selectedItems[0].childNodes.length > 2)
             selectedItems[0].replaceChild(document.createElement('hbox'), selectedItems[0].lastChild);
@@ -171,7 +171,7 @@ httpsfinder.Preferences = {
         try{
             var file = Components.classes["@mozilla.org/file/directory_service;1"]
             .getService(Components.interfaces.nsIProperties).get("ProfD", Components.interfaces.nsIFile);
-            file.append("httpsfinder.sqlite");
+            file.append("httpsinquirer.sqlite");
             var storageService = Components.classes["@mozilla.org/storage/service;1"]
             .getService(Components.interfaces.mozIStorageService);
             var mDBConn = storageService.openDatabase(file);
@@ -190,16 +190,16 @@ httpsfinder.Preferences = {
                     }
                 },
                 handleError: function(anError){
-                    dump("httpsfinder database error " + anError.message);
+                    dump("httpsinquirer database error " + anError.message);
                 },
                 handleCompletion: function(aReason){
                     if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED)
-                        dump("httpsfinder database error " + aReason.message);
+                        dump("httpsinquirer database error " + aReason.message);
                 }
             });
         }
         catch(e){
-            Components.utils.reportError("httpsfinder loadWhitelist " + e);
+            Components.utils.reportError("httpsinquirer loadWhitelist " + e);
         }
         finally{
             statement.reset();
@@ -219,7 +219,7 @@ httpsfinder.Preferences = {
             var file = Components.classes["@mozilla.org/file/directory_service;1"]
             .getService(Components.interfaces.nsIProperties)
             .get("ProfD", Components.interfaces.nsIFile);
-            file.append("httpsfinder.sqlite");
+            file.append("httpsinquirer.sqlite");
             var storageService = Components.classes["@mozilla.org/storage/service;1"]
             .getService(Components.interfaces.mozIStorageService);
             var mDBConn = storageService.openDatabase(file);
@@ -229,7 +229,7 @@ httpsfinder.Preferences = {
             statement.executeAsync({
                 handleResult: function(aResultSet){},
                 handleError: function(anError){
-                    dump("httpsfinder whitelist rule add error " + anError.message);
+                    dump("httpsinquirer whitelist rule add error " + anError.message);
                 },
                 handleCompletion: function(aReason){
                     //Append new rule to list if it was added without error.
@@ -240,14 +240,14 @@ httpsfinder.Preferences = {
                         row2.appendChild(cell);
                         theList.appendChild(row2);
                         var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-                        prefs.setBoolPref("extensions.httpsfinder.whitelistChanged",true);
+                        prefs.setBoolPref("extensions.httpsinquirer.whitelistChanged",true);
                         document.getElementById('whitelistURL').value = "";
                     }
                 }
             });
         }
         catch(e){
-            Components.utils.reportError("httpsfinder addToWhitelist " + e);
+            Components.utils.reportError("httpsinquirer addToWhitelist " + e);
         }
         finally{
             statement.reset();
@@ -263,7 +263,7 @@ httpsfinder.Preferences = {
         if(!theList.selectedItem.firstChild.getAttribute("label"))
             return;
         document.getElementById('whitelistURL').value = theList.selectedItem.firstChild.getAttribute("label");
-        httpsfinder.Preferences.RemoveWhitelistRule();
+        httpsinquirer.Preferences.RemoveWhitelistRule();
     },
 
     //Called when user removess an item from the good SSL list in Preferences > Advanced
@@ -273,20 +273,20 @@ httpsfinder.Preferences = {
 
         var selectedItems = theList.selectedItems;
 
-        for (let i = 0; i < httpsfinder.Preferences.results.goodSSL.length; i++){
-            if (httpsfinder.Preferences.results.goodSSL[i] == selectedItems[0].firstChild.getAttribute("label"))
-                httpsfinder.Preferences.results.goodSSL.splice(i,1);
+        for (let i = 0; i < httpsinquirer.Preferences.results.goodSSL.length; i++){
+            if (httpsinquirer.Preferences.results.goodSSL[i] == selectedItems[0].firstChild.getAttribute("label"))
+                httpsinquirer.Preferences.results.goodSSL.splice(i,1);
         }
 
-        for (let i = 0; i < httpsfinder.Preferences.results.cookieHostWhitelist.length; i++){
-            if (httpsfinder.Preferences.results.cookieHostWhitelist[i] == selectedItems[0].firstChild.getAttribute("label"))
-                httpsfinder.Preferences.results.cookieHostWhitelist.splice(i,1);
+        for (let i = 0; i < httpsinquirer.Preferences.results.cookieHostWhitelist.length; i++){
+            if (httpsinquirer.Preferences.results.cookieHostWhitelist[i] == selectedItems[0].firstChild.getAttribute("label"))
+                httpsinquirer.Preferences.results.cookieHostWhitelist.splice(i,1);
         }
 
         while(theList.itemCount > 0)
             theList.removeItemAt(0);
 
-        httpsfinder.Preferences.loadResults();
+        httpsinquirer.Preferences.loadResults();
     },
 
     //Delete selected rule(s) from whitelist
@@ -305,7 +305,7 @@ httpsfinder.Preferences = {
         try{
             var file = Components.classes["@mozilla.org/file/directory_service;1"]
             .getService(Components.interfaces.nsIProperties).get("ProfD", Components.interfaces.nsIFile);
-            file.append("httpsfinder.sqlite");
+            file.append("httpsinquirer.sqlite");
             var storageService = Components.classes["@mozilla.org/storage/service;1"]
             .getService(Components.interfaces.mozIStorageService);
             var mDBConn = storageService.openDatabase(file);
@@ -324,7 +324,7 @@ httpsfinder.Preferences = {
             statement.executeAsync({
                 handleResult: function(aResultSet){},
                 handleError: function(anError){
-                    dump("httpsfinder whitelist rule delete error " + anError.message);
+                    dump("httpsinquirer whitelist rule delete error " + anError.message);
                 },
                 handleCompletion: function(aReason){
                     if (aReason == Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED){
@@ -342,13 +342,13 @@ httpsfinder.Preferences = {
                         }
 
                         var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-                        prefs.setBoolPref("extensions.httpsfinder.whitelistChanged",true);
+                        prefs.setBoolPref("extensions.httpsinquirer.whitelistChanged",true);
                     }
                 }
             });
         }
         catch(e){
-            Components.utils.reportError("httpsfinder removeFromWhitelist " + e);
+            Components.utils.reportError("httpsinquirer removeFromWhitelist " + e);
         }
         finally{
             statement.reset();
@@ -456,22 +456,22 @@ httpsfinder.Preferences = {
     //User clicked "Clear temporary whitelist". Clear whitelist array and reimport
     resetWhitelist: function(){
         var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-        prefs.setBoolPref("extensions.httpsfinder.whitelistChanged",true);
+        prefs.setBoolPref("extensions.httpsinquirer.whitelistChanged",true);
 
-        var strings = document.getElementById("httpsfinderStrings");
-        httpsfinder.Preferences.popupNotify("HTTPS Finder", strings.getString("httpsfinder.overlay.whitelistReset"));
+        var strings = document.getElementById("httpsinquirerStrings");
+        httpsinquirer.Preferences.popupNotify("HTTPS Inquirer", strings.getString("httpsinquirer.overlay.whitelistReset"));
 
-        httpsfinder.Preferences.results.goodSSL.length = 0;
-        httpsfinder.Preferences.results.goodSSL = [];
-        httpsfinder.Preferences.results.whitelist.length = 0;
-        httpsfinder.Preferences.results.whitelist = [];
-        httpsfinder.Preferences.results.permWhitelistLength = 0;
+        httpsinquirer.Preferences.results.goodSSL.length = 0;
+        httpsinquirer.Preferences.results.goodSSL = [];
+        httpsinquirer.Preferences.results.whitelist.length = 0;
+        httpsinquirer.Preferences.results.whitelist = [];
+        httpsinquirer.Preferences.results.permWhitelistLength = 0;
 
         var theList = document.getElementById('cacheList');
         while (theList.itemCount > 0)
             theList.removeItemAt(0);
 
-        httpsfinder.Preferences.loadResults();
+        httpsinquirer.Preferences.loadResults();
     },
 
     sslReport: function(){
@@ -483,7 +483,7 @@ httpsfinder.Preferences = {
         reportUrl += selectedItems[0].firstChild.getAttribute("label");
         reportUrl += "&hideResults=on";
 
-        httpsfinder.Preferences.openWebsiteInTab(reportUrl);
+        httpsinquirer.Preferences.openWebsiteInTab(reportUrl);
     },
 
 
@@ -498,7 +498,7 @@ httpsfinder.Preferences = {
         var hostname = selectedItems[0].firstChild.getAttribute("label");
         var topLevel = "." + eTLDService.getPublicSuffixFromHost(hostname);
 
-        httpsfinder.Preferences.sharedWriteRule(hostname, topLevel, "");
+        httpsinquirer.Preferences.sharedWriteRule(hostname, topLevel, "");
     },
     
     secureCookieCheck: function() {

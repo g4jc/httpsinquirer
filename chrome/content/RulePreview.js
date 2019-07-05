@@ -9,7 +9,7 @@
  *  for the specific language governing rights and limitations under the
  *  License.
  *
- *  The Original Code is HTTPS Finder.
+ *  The Original Code is HTTPS Inquirer.
  *
  *  The Initial Developer of the Original Code is Kevin Jacobs.
  *  Portions created by the Initial Developer are Copyright (C) 2011
@@ -20,24 +20,24 @@
  *  ***** END LICENSE BLOCK *****
  */ 
 
-if (!httpsfinder) var httpsfinder = {};
+if (!httpsinquirer) var httpsinquirer = {};
 
-httpsfinder.RulePreview = {
+httpsinquirer.RulePreview = {
 
     //Load window - populate textbox with generated rule
-    httpsfinderLoadRulePreview: function(doc){
+    httpsinquirerLoadRulePreview: function(doc){
         document.getElementById('ruleBox').value = window.arguments[0].inn.rule;
     },
 
     //User clicked ok - return textbox contents as rule
-    httpsfinderOkRulePreview: function(doc){
+    httpsinquirerOkRulePreview: function(doc){
         var osString = Components.classes["@mozilla.org/xre/app-info;1"]
         .getService(Components.interfaces.nsIXULRuntime).OS;
 
         if(osString == "Darwin"){
-            Components.utils.import("resource://hfShared/hfShared.js", httpsfinder.RulePreview);
+            Components.utils.import("resource://hfShared/hfShared.js", httpsinquirer.RulePreview);
             //This is to work around a difference in the way OSX handles modal dialog windows.
-            httpsfinder.RulePreview.sharedWriteRule("","",document.getElementById("ruleBox").value);
+            httpsinquirer.RulePreview.sharedWriteRule("","",document.getElementById("ruleBox").value);
         }
         else
             window.arguments[0].out = {

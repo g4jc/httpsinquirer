@@ -1,19 +1,19 @@
-content httpsfinder chrome/content/
-skin httpsfinder classic/1.0 chrome/skin/
+content httpsinquirer chrome/content/
+skin httpsinquirer classic/1.0 chrome/skin/
 
-locale httpsfinder en-US chrome/locale/en-US/
-locale httpsfinder de chrome/locale/de/
-locale httpsfinder es-ES chrome/locale/es-ES/
-locale httpsfinder fi chrome/locale/fi/
-locale httpsfinder it chrome/locale/it/
-locale httpsfinder nl chrome/locale/nl/
-locale httpsfinder pl chrome/locale/pl/
-locale httpsfinder pt-BR chrome/locale/pt/
-locale httpsfinder pt-PT chrome/locale/pt/
-locale httpsfinder sv-SE chrome/locale/sv-SE/
-locale httpsfinder zh-CN chrome/locale/zh-CN/
-locale httpsfinder zh-TW chrome/locale/zh-TW/
-locale httpsfinder ru-RU chrome/locale/ru-RU/
+locale httpsinquirer en-US chrome/locale/en-US/
+locale httpsinquirer de chrome/locale/de/
+locale httpsinquirer es-ES chrome/locale/es-ES/
+locale httpsinquirer fi chrome/locale/fi/
+locale httpsinquirer it chrome/locale/it/
+locale httpsinquirer nl chrome/locale/nl/
+locale httpsinquirer pl chrome/locale/pl/
+locale httpsinquirer pt-BR chrome/locale/pt/
+locale httpsinquirer pt-PT chrome/locale/pt/
+locale httpsinquirer sv-SE chrome/locale/sv-SE/
+locale httpsinquirer zh-CN chrome/locale/zh-CN/
+locale httpsinquirer zh-TW chrome/locale/zh-TW/
+locale httpsinquirer ru-RU chrome/locale/ru-RU/
 
 resource hfShared modules/
-overlay chrome://browser/content/browser.xul  chrome://httpsfinder/content/Overlay.xul
+overlay chrome://browser/content/browser.xul  chrome://httpsinquirer/content/Overlay.xul

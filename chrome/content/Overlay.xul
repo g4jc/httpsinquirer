@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
 
 <?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
-<?xml-stylesheet type="text/css" href="chrome://httpsfinder/skin/Overlay.css" ?>
+<?xml-stylesheet type="text/css" href="chrome://httpsinquirer/skin/Overlay.css" ?>
 
-<!DOCTYPE overlay SYSTEM "chrome://httpsfinder/locale/Overlay.dtd">
-<overlay id="httpsfinder-browser-overlay"
+<!DOCTYPE overlay SYSTEM "chrome://httpsinquirer/locale/Overlay.dtd">
+<overlay id="httpsinquirer-browser-overlay"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript" src="chrome://httpsfinder/content/Overlay.js" />
-    <script type="application/x-javascript" src="chrome://httpsfinder/content/Preferences.js" />
+    <script type="application/x-javascript" src="chrome://httpsinquirer/content/Overlay.js" />
+    <script type="application/x-javascript" src="chrome://httpsinquirer/content/Preferences.js" />
 
     <stringbundleset id="stringbundleset">
-        <stringbundle id="httpsfinderStrings"
-      src="chrome://httpsfinder/locale/Overlay.properties" />
+        <stringbundle id="httpsinquirerStrings"
+      src="chrome://httpsinquirer/locale/Overlay.properties" />
     </stringbundleset>
 
     <menupopup id="menu_ToolsPopup">
-        <menu class="menu-iconic" id="httpsfinderMenu" label="&httpsfinder.title;"
-      accesskey="H" image="chrome://httpsfinder/skin/iconSmall.png"
+        <menu class="menu-iconic" id="httpsinquirerMenu" label="&httpsinquirer.title;"
+      accesskey="H" image="chrome://httpsinquirer/skin/iconSmall.png"
       insertafter="javascriptConsole,devToolsSeparator">
             <menupopup>
                 <menuitem class="menuitem-iconic"
-                    id="httpsfinderSettingsItem"
-                    image="chrome://httpsfinder/skin/settings.png"
-                    label="&httpsfinder.menu.settings;" accesskey="&httpsfinder.menu.settingsKey;"
-                    oncommand="httpsfinder.Overlay.openPreferences()" />
+                    id="httpsinquirerSettingsItem"
+                    image="chrome://httpsinquirer/skin/settings.png"
+                    label="&httpsinquirer.menu.settings;" accesskey="&httpsinquirer.menu.settingsKey;"
+                    oncommand="httpsinquirer.Overlay.openPreferences()" />
                 <menuitem class="menuitem-iconic"
-                    id="httpsfinderReloadWhitelist"
-                    image="chrome://httpsfinder/skin/refresh.png"
-                    label="&httpsfinder.menu.refresh;" accesskey="&httpsfinder.menu.refreshKey;"
-                    oncommand="httpsfinder.Overlay.resetWhitelist();" />
+                    id="httpsinquirerReloadWhitelist"
+                    image="chrome://httpsinquirer/skin/refresh.png"
+                    label="&httpsinquirer.menu.refresh;" accesskey="&httpsinquirer.menu.refreshKey;"
+                    oncommand="httpsinquirer.Overlay.resetWhitelist();" />
                 <menuseparator/>
-                <menuitem class="menuitem-iconic" id="httpsfinderHomepageItem"
-                    image="chrome://httpsfinder/skin/iconSmall.png"
-                    label="&httpsfinder.menu.homepage;" accesskey="&httpsfinder.menu.homepageKey;"
+                <menuitem class="menuitem-iconic" id="httpsinquirerHomepageItem"
+                    image="chrome://httpsinquirer/skin/iconSmall.png"
+                    label="&httpsinquirer.menu.homepage;" accesskey="&httpsinquirer.menu.homepageKey;"
                     oncommand="gBrowser.selectedTab = gBrowser.addTab('https://code.google.com/p/https-finder/');" />
-                <menuitem class="menuitem-iconic" id="httpsfinderReviewItem"
-                    image="chrome://httpsfinder/skin/rate.png"
-                    label="&httpsfinder.menu.rate;" accesskey="&httpsfinder.menu.rateKey;"
+                <menuitem class="menuitem-iconic" id="httpsinquirerReviewItem"
+                    image="chrome://httpsinquirer/skin/rate.png"
+                    label="&httpsinquirer.menu.rate;" accesskey="&httpsinquirer.menu.rateKey;"
                     oncommand="gBrowser.selectedTab = gBrowser.addTab('https://addons.mozilla.org/en-US/firefox/addon/https-finder/reviews/add');" />
-                <menuitem class="menuitem-iconic" id="httpsfinderHelpItem"
-                    image="chrome://httpsfinder/skin/help.png"
-                    label="&httpsfinder.menu.help;" accesskey="&httpsfinder.menu.helpKey;"
+                <menuitem class="menuitem-iconic" id="httpsinquirerHelpItem"
+                    image="chrome://httpsinquirer/skin/help.png"
+                    label="&httpsinquirer.menu.help;" accesskey="&httpsinquirer.menu.helpKey;"
                     oncommand="gBrowser.selectedTab = gBrowser.addTab('https://code.google.com/p/https-finder/wiki/Help');" />                
             </menupopup>
         </menu>

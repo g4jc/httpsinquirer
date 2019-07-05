@@ -16,7 +16,7 @@ var OS = Cc["@mozilla.org/observer-service;1"]
 var originallyInsecureCookies = [];
 
 function goodSSLFound(host){
-    if(httpsfinder.prefs.getBoolPref("attemptSecureCookies")){   
+    if(httpsinquirer.prefs.getBoolPref("attemptSecureCookies")){
         var enumerator = this.getCookiesFromHost(host);
         while (enumerator.hasMoreElements()) {
             var cookie = enumerator.getNext().QueryInterface(Components.interfaces.nsICookie2);
@@ -31,11 +31,11 @@ function getCookiesFromHost(host){
 }
 
 function _secureIndividualCookie(cookie) {    
-    if(httpsfinder.Overlay.isWhitelisted(cookie.host))
+    if(httpsinquirer.Overlay.isWhitelisted(cookie.host))
         return;
     
-    if(httpsfinder.results.securedCookieHosts.indexOf(cookie.host) == -1)
-        httpsfinder.results.securedCookieHosts.push(cookie.host);
+    if(httpsinquirer.results.securedCookieHosts.indexOf(cookie.host) == -1)
+        httpsinquirer.results.securedCookieHosts.push(cookie.host);
     
     this.originallyInsecureCookies.push(cookie.name + ";" + cookie.host + "/" + cookie.path);    
     
@@ -52,18 +52,18 @@ function _insecureIndividualCookie(cookie) {
 }
 
 function handleInsecureCookie(cookie){
-    if(httpsfinder.results.cookieHostWhitelist.indexOf(cookie.host) != -1)
+    if(httpsinquirer.results.cookieHostWhitelist.indexOf(cookie.host) != -1)
         return;
     
-    if(httpsfinder.results.goodSSL.indexOf(cookie.host) != -1){
+    if(httpsinquirer.results.goodSSL.indexOf(cookie.host) != -1){
         this._secureIndividualCookie(cookie);       
     }
     //Only securing wildcard cookies for normal "www.", or "no sub" domains. It seems that most incompatibility problems are 
     //fixed by doing this, since typically specialized subdomains may have HTTPS support whereas the whole site might not.
     //On the other hand, if the www. subdomain has good HTTPS, we're usually safe securing wildcard cookies here.
-    else if(httpsfinder.prefs.getBoolPref("secureWildcardCookies")){
-        for(var i = 0; i < httpsfinder.results.goodSSL.length; i++){
-            var trimmed = httpsfinder.results.goodSSL[i];
+    else if(httpsinquirer.prefs.getBoolPref("secureWildcardCookies")){
+        for(var i = 0; i < httpsinquirer.results.goodSSL.length; i++){
+            var trimmed = httpsinquirer.results.goodSSL[i];
             
             if(trimmed.indexOf("www.") != -1 || trimmed.indexOf(".") == trimmed.lastIndexOf(".")){                
                 if(trimmed.indexOf(".") != trimmed.lastIndexOf("."))
@@ -90,7 +90,7 @@ function restoreDefaultCookiesForHost(host){
 }
 
 function observe(subject, topic, data) {    
-    if(httpsfinder.prefs.getBoolPref("attemptSecureCookies")){
+    if(httpsinquirer.prefs.getBoolPref("attemptSecureCookies")){
         if (data == "added" || data == "changed") {
             try {
                 subject.QueryInterface(CI.nsIArray);
