@@ -18,13 +18,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email техподдержки:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Включить HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Не предлагать сохранение HTTPS правил (Для использования без HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Не предлагать сохранение HTTPS правил (Для использования без HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Автоматически использовать HTTPS, если возможно">
 <!ENTITY httpsfinder.preference.whitelistLabel "Белый список доменов (Не обнаруживать HTTPS на этих адресах)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Добавить в Белый список">
 <!ENTITY httpsfinder.preference.whitelistModify "Редактировать">
 <!ENTITY httpsfinder.preference.whitelistRemove "Удалить элемент">
-<!ENTITY httpsfinder.preference.savedRulesTip "Сохранённые правила могут быть отключены в настройках HTTPS Everywhere.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Сохранённые правила могут быть отключены в настройках HTTPS Always.">
 <!ENTITY httpsfinder.preference.ruleTip "Примечание для правил белого списка, домен www.domain.com это субдомен domain.com.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Узнать больше о HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "здесь">
@@ -44,7 +44,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Предварительный просмотр Правил:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Любые изменения, которые Вы сделаете, будут отражены в сохраненных правилах.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Нажмите OK, чтобы сохранить правило или Отменить, чтобы выйти не сохраняя">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "здесь">
 <!ENTITY httpsfinder.rulePreview.learnmore "Узнайте больше о форматировании правил">
 <!ENTITY httpsfinder.menu.settings "Настройки">

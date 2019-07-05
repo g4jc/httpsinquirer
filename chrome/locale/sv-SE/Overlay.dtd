@@ -20,13 +20,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "E-postadress till support:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Aktivera HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Visa ingen uppmaning att spara HTTPS-regel (för användning utan HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Visa ingen uppmaning att spara HTTPS-regel (för användning utan HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Tvinga HTTPS automatiskt, om tillgängligt">
 <!ENTITY httpsfinder.preference.whitelistLabel "Betrodda domäner (identifiera inte HTTPS på dessa domäner)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Lägg till">
 <!ENTITY httpsfinder.preference.whitelistModify "Ändra">
 <!ENTITY httpsfinder.preference.whitelistRemove "Ta bort">
-<!ENTITY httpsfinder.preference.savedRulesTip "Sparade regler kan inaktiveras i HTTPS Everywheres inställningar.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Sparade regler kan inaktiveras i HTTPS Alwayss inställningar.">
 <!ENTITY httpsfinder.preference.ruleTip "För betrodda domäner: Notera att www.domän.se är en underdomän av domän.se.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Läs mer om HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "här">
@@ -55,7 +55,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Förhandsgranskning:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Alla ändringar du gör kommer att återspeglas i den sparade regeln.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Klicka på OK för att spara regeln eller Avbryt för att gå tillbaka utan att spara">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "här">
 <!ENTITY httpsfinder.rulePreview.learnmore "Läs mer om regelformatering">
 <!ENTITY httpsfinder.menu.settings "Inställningar">

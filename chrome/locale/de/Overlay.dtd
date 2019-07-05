@@ -26,7 +26,7 @@
 <!ENTITY httpsfinder.preference.whitelistAddButton "Zur Positivliste hinzufügen">
 <!ENTITY httpsfinder.preference.whitelistModify "Ändern">
 <!ENTITY httpsfinder.preference.whitelistRemove "Entfernen">
-<!ENTITY httpsfinder.preference.savedRulesTip "Gespeicherte Regeln können in den Einstellungen von HTTPS Everywhere deaktivert werden.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Gespeicherte Regeln können in den Einstellungen von HTTPS Always deaktivert werden.">
 <!ENTITY httpsfinder.preference.ruleTip "Beachten Sie bei Regeln der Positivliste, dass www.domain.com eine Subdomäne von domain.com ist.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Mehr über HTTPS Finder erfahren Sie">
 <!ENTITY httpsfinder.preference.learnLinkName "hier">
@@ -46,7 +46,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Regelvorschau:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Alle von Ihnen vorgenommenen Änderungen spiegeln sich in der gespeicherten Regel wider.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Klicken Sie OK, um die Regel zu speichern oder Abbrechen, um ohne Speicherung zurückzukehren">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "hier">
 <!ENTITY httpsfinder.rulePreview.learnmore "Mehr über Regelformatierung">
 <!ENTITY httpsfinder.menu.settings "Einstellungen">

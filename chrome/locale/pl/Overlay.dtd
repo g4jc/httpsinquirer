@@ -20,13 +20,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "E-mail pomocy:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Włącz HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Nie pytaj o zapisanie reguł przekierowań (do wykorzystania bez HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Nie pytaj o zapisanie reguł przekierowań (do wykorzystania bez HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Automatycznie przekieruj na HTTPS, gdy jest dostępne">
 <!ENTITY httpsfinder.preference.whitelistLabel "Lista domen, na których HTTPS nie jest wykrywany">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Dodaj do listy">
 <!ENTITY httpsfinder.preference.whitelistModify "Modyfikuj">
 <!ENTITY httpsfinder.preference.whitelistRemove "Usuń">
-<!ENTITY httpsfinder.preference.savedRulesTip "Zapisane reguły mogą zostać wyłączone w ustawieniach HTTPS Everywhere.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Zapisane reguły mogą zostać wyłączone w ustawieniach HTTPS Always.">
 <!ENTITY httpsfinder.preference.ruleTip "Tworząc reguły pamiętaj, że www.domain.com jest subdomeną domain.com.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Więcej informacji na temat HTTPS Finder znajdziesz">
 <!ENTITY httpsfinder.preference.learnLinkName "tutaj.">
@@ -46,7 +46,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Podgląd reguły">
 <!ENTITY httpsfinder.rulePreview.tip1 "Wszelkie wprowadzone zmiany zostaną uwzględnione w zapisanej regule.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Naciśnij przycisk OK, by zapisać regułę lub Anuluj, aby powrócić bez zapisywania">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "tutaj">
 <!ENTITY httpsfinder.rulePreview.learnmore "Dowiedz się więcej o formatowaniu reguł">
 <!ENTITY httpsfinder.menu.settings "Ustawienia">

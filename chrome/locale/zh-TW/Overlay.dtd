@@ -18,13 +18,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email幫助:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "啟用HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "不要提示我儲存HTTPS規則 (適用於不使用HTTPS Everywhere的使用者)">
+<!ENTITY httpsfinder.preference.noRulePrompt "不要提示我儲存HTTPS規則 (適用於不使用HTTPS Always的使用者)">
 <!ENTITY httpsfinder.preference.autoForward "當HTTPS可用時自動使用">
 <!ENTITY httpsfinder.preference.whitelistLabel "網域白名單(不偵測這些網頁)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "加入白名單">
 <!ENTITY httpsfinder.preference.whitelistModify "修改">
 <!ENTITY httpsfinder.preference.whitelistRemove "移除">
-<!ENTITY httpsfinder.preference.savedRulesTip "儲存的規則可以在HTTPS Everywhere設定中停用">
+<!ENTITY httpsfinder.preference.savedRulesTip "儲存的規則可以在HTTPS Always設定中停用">
 <!ENTITY httpsfinder.preference.ruleTip "請注意: www.domain.com 為 domain.com 的子網域">
 <!ENTITY httpsfinder.preference.learnMoreTip "更多關於HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "這裡">
@@ -44,7 +44,7 @@
 <!ENTITY httpsfinder.rulePreview.top "預覽規則:">
 <!ENTITY httpsfinder.rulePreview.tip1 "任何改變將會儲存到規則中">
 <!ENTITY httpsfinder.rulePreview.tip2 "按確定儲存規則或按取消直接返回">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "這裡">
 <!ENTITY httpsfinder.rulePreview.learnmore "更多的規則格式">
 <!ENTITY httpsfinder.menu.settings "設定">

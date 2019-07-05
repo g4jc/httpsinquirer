@@ -20,13 +20,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email supporto:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Attiva HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Non chiedere di salvare le regole HTTPS (Utilizza HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Non chiedere di salvare le regole HTTPS (Utilizza HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Applica automaticamente HTTPS quando disponibile">
 <!ENTITY httpsfinder.preference.whitelistLabel "Whitelist domini (Non utilizzare HTTPS per questi domini)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Aggiungi alla whitelist">
 <!ENTITY httpsfinder.preference.whitelistModify "Modifica">
 <!ENTITY httpsfinder.preference.whitelistRemove "Rimuovi voce">
-<!ENTITY httpsfinder.preference.savedRulesTip "Il salvataggio delle regole può essere disabilitato nelle impostazioni di HTTPS Everywhere.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Il salvataggio delle regole può essere disabilitato nelle impostazioni di HTTPS Always.">
 <!ENTITY httpsfinder.preference.ruleTip "Nota che www.domain.com è sottodominio di domain.com">
 <!ENTITY httpsfinder.preference.learnMoreTip "Scopri di più su HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "qui">
@@ -46,7 +46,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Anteprima regola:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Tutte le modifiche apportate saranno applicate alla regola salvata.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Clicca su OK per salvare la regola, o su Cancella per tornare indietro senza salvare">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "qui">
 <!ENTITY httpsfinder.rulePreview.learnmore "Scopri di più sulla formattazione delle regole">
 <!ENTITY httpsfinder.menu.settings "Preferenze">

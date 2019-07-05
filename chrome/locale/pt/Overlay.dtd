@@ -21,13 +21,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email para Suporte:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Permitir HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Não pergunte para salvar regra do HTTPS Finder (Para uso sem o aditivo HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Não pergunte para salvar regra do HTTPS Finder (Para uso sem o aditivo HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Automaticamente force HTTPS quando possível">
 <!ENTITY httpsfinder.preference.whitelistLabel "Lista Branca de domínios (Não detecte HTTPS nestes domínios)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Adicione na Lista Branca">
 <!ENTITY httpsfinder.preference.whitelistModify "Alterar Item">
 <!ENTITY httpsfinder.preference.whitelistRemove "Remover Item">
-<!ENTITY httpsfinder.preference.savedRulesTip "Regras salvas podem ser desabilitadas em Ajustes e Opções do aditivo HTTPS Everywhere.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Regras salvas podem ser desabilitadas em Ajustes e Opções do aditivo HTTPS Always.">
 <!ENTITY httpsfinder.preference.ruleTip "Para regras da Lista Branca, note que www.domain.com é um subdomínio de domain.com.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Aprenda mais sobre o HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "aqui">
@@ -45,7 +45,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Previsão da regra:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Quaisquer alterações que você tiver feito na regra entram em vigor somente depois de salvas.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Clique em OK para salvar a regra, ou Cancelar para cancelar">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "aqui">
 <!ENTITY httpsfinder.rulePreview.learnmore "Aprenda mais sobre formatação de regras">
 <!ENTITY httpsfinder.menu.settings "Preferencias">

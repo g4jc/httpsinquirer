@@ -18,13 +18,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email支持:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "开启HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "不要提示我保存HTTPS规则(针对不使用HTTPS Everywhere的用户)">
+<!ENTITY httpsfinder.preference.noRulePrompt "不要提示我保存HTTPS规则(针对不使用HTTPS Always的用户)">
 <!ENTITY httpsfinder.preference.autoForward "HTTPS可用时自动强制使用">
 <!ENTITY httpsfinder.preference.whitelistLabel "域名白名单(这些域名不会被自动探测)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "加入白名单">
 <!ENTITY httpsfinder.preference.whitelistModify "变更">
 <!ENTITY httpsfinder.preference.whitelistRemove "移除">
-<!ENTITY httpsfinder.preference.savedRulesTip "已保存的规则可在HTTPS Everywhere中被禁用">
+<!ENTITY httpsfinder.preference.savedRulesTip "已保存的规则可在HTTPS Always中被禁用">
 <!ENTITY httpsfinder.preference.ruleTip "请注意对于白名单规则,  www.domain.com 是 domain.com 的二级域名">
 <!ENTITY httpsfinder.preference.learnMoreTip "了解更多有关HTTPS Finder的信息">
 <!ENTITY httpsfinder.preference.learnLinkName "单击此处">
@@ -42,7 +42,7 @@
 <!ENTITY httpsfinder.rulePreview.top "规则预览:">
 <!ENTITY httpsfinder.rulePreview.tip1 "所有更改将会体现在已保存的规则中">
 <!ENTITY httpsfinder.rulePreview.tip2 "点击OK按钮保存规则,或者点击Cancel按钮不保存直接返回">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "单击此处">
 <!ENTITY httpsfinder.rulePreview.learnmore "学习更多有关规则格式的知识">
 <!ENTITY httpsfinder.menu.settings "设置">

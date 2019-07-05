@@ -21,13 +21,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Email hỗ trợ:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Bật HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Không hỏi lại khi lưu thiết lập HTTPS (Dùng khi không có HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Không hỏi lại khi lưu thiết lập HTTPS (Dùng khi không có HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Tự động bắt buộc HTTPS khi sẵn sàng.">
 <!ENTITY httpsfinder.preference.whitelistLabel "Danh sách an toàn (Không cần HTTPS với những tên miền này)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Thêm vào danh sách an toàn">
 <!ENTITY httpsfinder.preference.whitelistModify "Chỉnh sửa">
 <!ENTITY httpsfinder.preference.whitelistRemove "Xóa">
-<!ENTITY httpsfinder.preference.savedRulesTip "Thiết lập đã lưu có thể bị vô hiệu hóa trong thiết lập HTTPS Everywhere.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Thiết lập đã lưu có thể bị vô hiệu hóa trong thiết lập HTTPS Always.">
 <!ENTITY httpsfinder.preference.ruleTip "Với thiết lập danh sách an toàn, chú ý rằng www.domain.com là tên miền phụ (domain con) của domain.com.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Tìm hiểu thêm về HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "tại đây">
@@ -47,7 +47,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Bản xem trước của thiết lập:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Những gì bạn thay đổi sẽ thể hiện trong các thiết lập được lưu.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Nhấn OK để lưu thiết lập hoặc Hủy bỏ (Cancel) để trở lại.">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "tại đây">
 <!ENTITY httpsfinder.rulePreview.learnmore "Tìm hiểu thêm về cấu trúc thiết lập">
 <!ENTITY httpsfinder.menu.settings "Tùy chọn">

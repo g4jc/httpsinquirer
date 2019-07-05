@@ -229,7 +229,7 @@ function sharedWriteRule(hostname, topLevel, OSXRule){
     var file = Cc["@mozilla.org/file/directory_service;1"].
     getService(Ci.nsIProperties).get("ProfD", Ci.nsIFile);
 
-    file.append("HTTPSEverywhereUserRules")
+    file.append("HTTPSAlwaysUserRules")
     file.append(title + ".xml");
     try{
         file.create(Ci.nsIFile.NORMAL_FILE_TYPE, 0666);
@@ -290,7 +290,7 @@ function alertRuleFinished(aDocument){
 
     var removeNotification = this.removeNotification;
 
-    //Determin FF version and use proper method to check for HTTPS Everywhere
+    //Determin FF version and use proper method to check for HTTPS Always
     var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]  
          .getService(Components.interfaces.nsIXULAppInfo);  
     var versionChecker = Components.classes["@mozilla.org/xpcom/version-comparator;1"]  
@@ -298,42 +298,42 @@ function alertRuleFinished(aDocument){
                         
     if(versionChecker.compare(appInfo.version, "4.0") >= 0){
         Cu.import("resource://gre/modules/AddonManager.jsm");
-        AddonManager.getAddonByID("https-everywhere@eff.org", function(addon) {
+        AddonManager.getAddonByID("https-always@hyperbola.info", function(addon) {
             //Addon is null if not installed
             if(addon == null)
-                getHTTPSEverywhere();
+                getHTTPSAlways();
             else if(addon != null)
                 promptForRestart();
         });
     }
     else{  //Firefox versions below 4.0
-        if(!Application.extensions.has("https-everywhere@eff.org"))
-            getHTTPSEverywhere();
+        if(!Application.extensions.has("https-always@hyperbola.info"))
+            getHTTPSAlways();
         else
             promptForRestart();
     }
 
-    //Alert user to install HTTPS Everywhere for rule enforcement
-    var getHTTPSEverywhere = function() {
+    //Alert user to install HTTPS Always for rule enforcement
+    var getHTTPSAlways = function() {
         var installButtons = [{
-            label: strings.getString("httpsfinder.main.getHttpsEverywhere"),
-            accessKey: strings.getString("httpsfinder.main.getHttpsEverywhereKey"),
+            label: strings.getString("httpsfinder.main.getHttpsAlways"),
+            accessKey: strings.getString("httpsfinder.main.getHttpsAlwaysKey"),
             popup: null,
-            callback: getHE  //Why is this needed? Setting the callback directly automatically calls when there is a parameter
+            callback: getHA  //Why is this needed? Setting the callback directly automatically calls when there is a parameter
         }];
        
         var nb = currentWindow.gBrowser.getNotificationBox(currentWindow.gBrowser.getBrowserForDocument(aDocument));
-        nb.appendNotification(strings.getString("httpsfinder.main.NoHttpsEverywhere"),
-            'httpsfinder-getHE','chrome://httpsfinder/skin/httpsAvailable.png',
+        nb.appendNotification(strings.getString("httpsfinder.main.NoHttpsAlways"),
+            'httpsfinder-getHA','chrome://httpsfinder/skin/httpsAvailable.png',
             nb.PRIORITY_INFO_HIGH, installButtons);
     };
 
     //See previous comment (in installButtons)
-    var getHE = function(){
-        this.openWebsiteInTab("http://www.eff.org/https-everywhere/");
+    var getHA = function(){
+        this.openWebsiteInTab("https://github.com/g4jc/https-always");
     };
 
-    //HTTPS Everywhere is installed. Prompt for restart
+    //HTTPS Always is installed. Prompt for restart
     var promptForRestart = function() {
         var nb = currentWindow.gBrowser.getNotificationBox(currentWindow.gBrowser.getBrowserForDocument(aDocument));
         var privatebrowsing = false;

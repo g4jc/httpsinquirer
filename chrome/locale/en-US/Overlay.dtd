@@ -18,13 +18,13 @@
 <!ENTITY httpsfinder.preference.supportTitle "Support Email:">
 <!ENTITY httpsfinder.preference.supportEmail "httpsfinder@gmail.com">
 <!ENTITY httpsfinder.preference.enable "Enable HTTPS Finder">
-<!ENTITY httpsfinder.preference.noRulePrompt "Do not prompt to save HTTPS rule (For use without HTTPS Everywhere)">
+<!ENTITY httpsfinder.preference.noRulePrompt "Do not prompt to save HTTPS rule (For use without HTTPS Always)">
 <!ENTITY httpsfinder.preference.autoForward "Automatically enforce HTTPS when available">
 <!ENTITY httpsfinder.preference.whitelistLabel "Domain Whitelist (Do not detect HTTPS on these domains)">
 <!ENTITY httpsfinder.preference.whitelistAddButton "Add to Whitelist">
 <!ENTITY httpsfinder.preference.whitelistModify "Modify">
 <!ENTITY httpsfinder.preference.whitelistRemove "Remove Item">
-<!ENTITY httpsfinder.preference.savedRulesTip "Saved rules can be disabled in HTTPS Everywhere settings.">
+<!ENTITY httpsfinder.preference.savedRulesTip "Saved rules can be disabled in HTTPS Always settings.">
 <!ENTITY httpsfinder.preference.ruleTip "For whitelist rules, note that www.domain.com is a subdomain of domain.com.">
 <!ENTITY httpsfinder.preference.learnMoreTip "Learn more about HTTPS Finder">
 <!ENTITY httpsfinder.preference.learnLinkName "here">
@@ -44,7 +44,7 @@
 <!ENTITY httpsfinder.rulePreview.top "Rule Preview:">
 <!ENTITY httpsfinder.rulePreview.tip1 "Any changes you make will be reflected in the saved rule.">
 <!ENTITY httpsfinder.rulePreview.tip2 "Click OK to save the rule, or Cancel to go back without saving">
-<!ENTITY httpsfinder.rulePreview.link "https://www.eff.org/https-everywhere/rulesets">
+<!ENTITY httpsfinder.rulePreview.link "https://github.com/g4jc/https-always/blob/master/docs/en_US/rulesets.md">
 <!ENTITY httpsfinder.rulePreview.clickhere "here">
 <!ENTITY httpsfinder.rulePreview.learnmore "Learn more about rule formatting">
 <!ENTITY httpsfinder.menu.settings "Preferences">
