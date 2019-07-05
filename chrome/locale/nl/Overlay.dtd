@@ -7,7 +7,7 @@
 
 <!--januari, februari, mart, april, mei, juni, juli, augustus, september, october, november, december. Format: 23. mei 2011-->
 
-<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.version "0.92">
 <!ENTITY httpsinquirer.buildDate "9 februari 2012">
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Datum van uitgave:">

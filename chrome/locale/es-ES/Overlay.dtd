@@ -7,7 +7,7 @@
 
 <!--enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre. Format: 23 may 2011-->
 
-<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.version "0.92">
 <!ENTITY httpsinquirer.buildDate "9 febrero 2012">
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Fecha de creación:">

@@ -4,7 +4,7 @@
   xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
     <Description about="urn:mozilla:install-manifest">
-        <em:id>{6bdc61ae-7b80-44a3-9476-e1d121ec2238}</em:id>
+        <em:id>httpsinquirer@hyperbola.info</em:id>
 
         <em:localized>
             <Description>
@@ -91,20 +91,45 @@
         <em:name>HTTPS Inquirer</em:name>
         <em:description>Automatically detect and alert when SSL is available on a web page. Automated rule creation for HTTPS Always</em:description>
         <em:optionsURL>chrome://httpsinquirer/content/Preferences.xul</em:optionsURL>
-        <em:version>0.91</em:version>
-        <em:creator>Kevin Jacobs</em:creator>
+        <em:version>0.92</em:version>
+        <em:creator>Hyperbola Project</em:creator>
+        <em:contributor>Kevin Jacobs</em:contributor>
         <em:iconURL>chrome://httpsinquirer/skin/iconLarge.png</em:iconURL>
         <em:icon64URL>chrome://httpsinquirer/skin/icon64.png</em:icon64URL>
-        <em:homepageURL>https://code.google.com/p/https-finder/</em:homepageURL>
+        <em:homepageURL>https://github.com/g4jc/httpsinquirer/</em:homepageURL>
         <em:type>2</em:type>
 
 
-    <!-- Mozilla Firefox -->
+        <!-- Iceweasel-UXP/Basilisk -->
         <em:targetApplication>
             <Description>
                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-                <em:minVersion>4.0</em:minVersion>
-                <em:maxVersion>26.0</em:maxVersion>
+                <em:minVersion>48.0</em:minVersion>
+                <em:maxVersion>52.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <!-- PaleMoon -->
+        <em:targetApplication>
+            <Description>
+                <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+                <em:minVersion>27.0</em:minVersion>
+                <em:maxVersion>28.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <!-- Iceape-UXP -->
+        <em:targetApplication>
+            <Description>
+                <em:id>{9184b6fe-4a5c-484d-8b4b-efbfccbfb514}</em:id>
+                <em:minVersion>52.0</em:minVersion>
+                <em:maxVersion>52.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <!-- Seamonkey -->
+        <em:targetApplication>
+            <Description>
+                <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+                <em:minVersion>2.48</em:minVersion>
+                <em:maxVersion>2.49.*</em:maxVersion>
             </Description>
         </em:targetApplication>
     </Description>

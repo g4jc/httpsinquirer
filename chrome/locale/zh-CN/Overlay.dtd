@@ -5,7 +5,7 @@
 <!ENTITY httpsinquirer.prefSize.detectChkDescWidth "405">
 <!--End prefWindow sizing-->
 
-<!ENTITY httpsinquirer.version "0.91">
+<!ENTITY httpsinquirer.version "0.92">
 <!ENTITY httpsinquirer.buildDate "9 February 2012">
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "插件最后打包于:">
