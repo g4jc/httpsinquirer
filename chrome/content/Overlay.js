@@ -181,31 +181,36 @@ httpsinquirer.Overlay = {
      * causes the notifications to be automatically dismissed from time to time. This is basically a method to slow down alerts until the page is ready.
      */
     onPageLoadListener: function(aEvent) {
-        var brow = gBrowser.getBrowserForDocument(aEvent.originalTarget);
-        var index = gBrowser.getBrowserIndexForDocument(aEvent.originalTarget);
-        if(typeof httpsinquirer.Overlay.redirectedTab[index] == "undefined" ||
-            typeof httpsinquirer.Overlay.redirectedTab[index][0] == "undefined" ||
-            typeof httpsinquirer.Overlay.redirectedTab[index][1] == "undefined" ||
-            brow.currentURI.scheme != "https" || brow == null)
-            return;
+        let brow = gBrowser.getBrowserForDocument(aEvent.originalTarget);
+        let index = gBrowser.getBrowserIndexForDocument(aEvent.originalTarget);
+        if (brow) {
+          if(typeof httpsinquirer.Overlay.redirectedTab[index] == "undefined" ||
+              typeof httpsinquirer.Overlay.redirectedTab[index][0] == "undefined" ||
+              typeof httpsinquirer.Overlay.redirectedTab[index][1] == "undefined" ||
+              brow.currentURI.scheme != "https" || brow == null)
+          {
+              return;
+          }
 
-        var tabHost = brow.currentURI.host;
-        var storedHost = httpsinquirer.Overlay.redirectedTab[index][1].host;
-        if(httpsinquirer.Overlay.getHostWithoutSub(tabHost) != httpsinquirer.Overlay.getHostWithoutSub(storedHost)){
-            //Alert was for a previous tab and was not dismissed (page change timed just right before alert was cleared
-            httpsinquirer.Overlay.redirectedTab[index] = new Array();
-            if(httpsinquirer.debug)
-                dump("httpsinquirer resetting alert for tab - host mismatch on " + tabHost  +  " and "  + storedHost + "\n");
-            return;
-        }
+          let tabHost = brow.currentURI.host;
+          let storedHost = httpsinquirer.Overlay.redirectedTab[index][1].host;
+          if(httpsinquirer.Overlay.getHostWithoutSub(tabHost) != httpsinquirer.Overlay.getHostWithoutSub(storedHost)){
+              //Alert was for a previous tab and was not dismissed (page change timed just right before alert was cleared
+              httpsinquirer.Overlay.redirectedTab[index] = new Array();
+              if(httpsinquirer.debug)
+                  dump("httpsinquirer resetting alert for tab - host mismatch on " + tabHost  +  " and "  + storedHost + "\n");
+              return;
+          }
 
-        //If user was redirected - Redirected array holds at [x][0] a bool for whether or not the tab index has been redirected.
-        //[x][1] holds a string hostname for the pre-redirect URL.  This is necessary because some sites like Google redirect to
-        //encrypted.google.com when you use HTTPS.  We have to remember the old URL so it can be whitelisted from the alert drop down.
-        if(httpsinquirer.Overlay.redirectedTab[index][0]){
-            if(!httpsinquirer.prefs.getBoolPref("noruleprompt"))
-                httpsinquirer.Overlay.alertSSLEnforced(aEvent.originalTarget);
-            httpsinquirer.Overlay.redirectedTab[index][0] = false;
+          //If user was redirected - Redirected array holds at [x][0] a bool for whether or not the tab index has been redirected.
+          //[x][1] holds a string hostname for the pre-redirect URL.  This is necessary because some sites like Google redirect to
+          //encrypted.google.com when you use HTTPS.  We have to remember the old URL so it can be whitelisted from the alert drop down.
+          if(httpsinquirer.Overlay.redirectedTab[index][0]){
+              if(!httpsinquirer.prefs.getBoolPref("noruleprompt")) {
+                  httpsinquirer.Overlay.alertSSLEnforced(aEvent.originalTarget);
+              }
+              httpsinquirer.Overlay.redirectedTab[index][0] = false;
+          }
         }
     },
 
