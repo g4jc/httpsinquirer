@@ -327,24 +327,18 @@ function alertRuleFinished(aDocument){
 
     //HTTPS Always is installed. Prompt for restart
     var promptForRestart = function() {
-        var nb = currentWindow.gBrowser.getNotificationBox(currentWindow.gBrowser.getBrowserForDocument(aDocument));
-        var privatebrowsing = false;
+        let nb = currentWindow.gBrowser.getNotificationBox(currentWindow.gBrowser.getBrowserForDocument(aDocument));
+        let wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+        let browserWindow = wm.getMostRecentWindow("navigator:browser");
+        var isPrivate = false;
         try {
-          // Firefox 20+
+          // Private Browsing Check
           Components.utils.import("resource://gre/modules/PrivateBrowsingUtils.jsm");
-          if (!PrivateBrowsingUtils.isWindowPrivate(window)) {
-            privatebrowsing = true;
-          }
+          isPrivate = PrivateBrowsingUtils.isWindowPrivate(browserWindow);
+
         } catch(e) {
-          // pre Firefox 20 (if you do not have access to a doc. 
-          // might use doc.hasAttribute("privatebrowsingmode") then instead)
-          try {
-            privatebrowsing = Components.classes["@mozilla.org/privatebrowsing;1"].
-                                    getService(Components.interfaces.nsIPrivateBrowsingService).
-                                    privateBrowsingEnabled;
-          } catch(e) {
             Components.utils.reportError(e);
-          }
         }
 
         var restartButtons = [{
@@ -354,7 +348,7 @@ function alertRuleFinished(aDocument){
             callback: restartNow
         }];
 
-        if (privatebrowsing)
+        if (isPrivate)
             nb.appendNotification(strings.getString("httpsinquirer.main.restartPromptPrivate"),
                 "httpsinquirer-restart",'chrome://httpsinquirer/skin/httpsAvailable.png',
                 nb.PRIORITY_INFO_HIGH, restartButtons);
