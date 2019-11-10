@@ -1,0 +1,6 @@
+*.xpi
+*.zip
+*.sh
+.git
+.gitignore
+.ignore
