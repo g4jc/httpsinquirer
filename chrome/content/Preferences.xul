@@ -187,6 +187,8 @@
                         <separator class="thin"/>
                         <separator class="groove"  width = "&httpsinquirer.prefSize.detectDescWidth;"/>
                         <separator class="thin"/>
+                        <description>Original Concept and Development by:</description>
+                        <description>Kevin Jacobs (Retired)</description>
                         <row>
                             <groupbox width = "&httpsinquirer.prefSize.detectDescWidth;">
                                 <caption label="&httpsinquirer.preference.translations;"/>
