@@ -8,7 +8,7 @@
 <!--janeiro fevereiro março abril maio junho julho agosto setembro outubro novembro dezembro -->
 
 
-<!ENTITY httpsinquirer.version "0.92">
+<!ENTITY httpsinquirer.version "0.93">
 <!ENTITY httpsinquirer.buildDate "9/fevereiro/2012">
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Data da revisão:">

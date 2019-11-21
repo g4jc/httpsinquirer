@@ -5,7 +5,7 @@
 <!ENTITY httpsinquirer.prefSize.detectChkDescWidth "405">
 <!--End prefWindow sizing-->
 
-<!ENTITY httpsinquirer.version "0.92">
+<!ENTITY httpsinquirer.version "0.93">
 <!ENTITY httpsinquirer.buildDate "4 апреля 2013">
 <!ENTITY httpsinquirer.title "HTTPS Inquirer">
 <!ENTITY httpsinquirer.buildDateTitle "Дата сборки:">

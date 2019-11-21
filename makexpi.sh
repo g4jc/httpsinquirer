@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.92"
+VERSION="0.93"
 sed -i "/<em:version>/c\        <em:version>$VERSION</em:version>" install.rdf
 
 if [ ! -d "$DIRECTORY" ]; then
