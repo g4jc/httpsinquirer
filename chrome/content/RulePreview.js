@@ -9,7 +9,7 @@
  *  for the specific language governing rights and limitations under the
  *  License.
  *
- *  The Original Code is HTTPS Inquirer.
+ *  The Original Code is HTTPS Finder.
  *
  *  The Initial Developer of the Original Code is Kevin Jacobs.
  *  Portions created by the Initial Developer are Copyright (C) 2011
