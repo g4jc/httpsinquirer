@@ -161,11 +161,12 @@ function sharedWriteRule(hostname, topLevel, OSXRule){
         rule += "\"" + hostname + "\"";
         rule += "\/>\n";
 
-    if(domains.length == 2) {
-        //Then the hostname is of the form "mysite.com". We add a "www." rule as well in this case.
-        var wwwHost =  "www." + hostname;
+    if(hostname.startsWith('www.')) {
+        // Then the hostname is of the form "www.mysite.com".
+        // Pass the main hostname here.
+        var newHost =  hostname.slice(hostname.indexOf(".",0) + 1);
         rule += "       <target host=";
-        rule += "\"" + wwwHost + "\"";
+        rule += "\"" + newHost + "\"";
         rule += "\/>\n";
     }
 
